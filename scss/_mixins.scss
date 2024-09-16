@@ -1,0 +1,14 @@
+@mixin p-normal() {
+    font-weight: 400;
+    font-size: 20px;
+    color: $white;
+    line-height: 24.4px;
+  }
+
+  @mixin p-small($color) {
+    font-weight: 400;
+    font-size: 17px;
+    color: $color;
+    line-height: 24.14px;
+    letter-spacing: -1%;
+  }
