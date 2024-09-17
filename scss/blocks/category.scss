@@ -1,0 +1,117 @@
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 135px;
+
+    &__header {
+        h2 {
+            font-size: 59px;
+            font-weight: 700;
+            line-height: 73.16px;
+            color: $black;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        a {
+            @include p-big($black);
+            text-decoration: none;
+            &:hover {
+                padding-bottom: 3px;
+                border-bottom: 2px solid $black;
+            }
+        }
+        &__active a {
+            color: $orange-200;
+            padding-bottom: 3px;
+            border-bottom: 2px solid $orange-200;
+            &:hover {
+                padding-bottom: 3px;
+                border-bottom: 2px solid $orange-200;
+            }
+        }
+    }
+
+    &__content {
+        margin-top: 100px;
+        max-width: 1170px;
+        display: grid;
+        grid-template-rows: repeat(2, 531px);
+        grid-template-columns: repeat(3, 370px);
+        gap: 30px;
+    }
+
+    &__container {
+        position: relative;
+        padding: 50px;
+        border-radius: 50px;
+        cursor: pointer;
+        background: linear-gradient(
+            360deg,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.06) 48.44%,
+            rgba(0, 0, 0, 0.5) 100%
+        );
+        overflow: hidden;
+
+        &__image {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        &:hover &__image {
+            transform: scale(1.2);
+        }
+        &:hover button {
+          background-color: $green-400;
+          padding: 7px 20px;
+          border-radius: 50px;
+
+      }
+    }
+
+    &__item {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        button {
+            @include p-big($white);
+            display: flex;
+            gap: 15px;
+            width: fit-content;
+
+            background-color: inherit;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+
+        }
+    }
+
+    &__info {
+        h3 {
+            width: 80%;
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 42.7px;
+            color: $white;
+        }
+        p {
+            @include p-small($white);
+            margin-top: 16px;
+        }
+    }
+}
