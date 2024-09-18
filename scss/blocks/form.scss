@@ -1,0 +1,120 @@
+.form {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 135px;
+
+    &__header {
+        h2 {
+            font-weight: 700;
+            font-size: 59px;
+            line-height: 73.16px;
+            color: $black;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            @include p-normal;
+            color: $gray-300;
+            text-align: center;
+        }
+    }
+
+    &__wrap {
+        margin-top: 100px;
+        background-color: $white;
+        border-radius: 50px;
+        padding: 70px;
+
+        label {
+          @include p-normal;
+          color: $black;
+      }
+    }
+
+    &__inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    &__input {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: 100%;
+
+        input,
+        select {
+            @include p-normal;
+            appearance: none;
+            color: $black;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid $beige-200;
+            background-color: $beige-100;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            &:hover {
+                background-color: $beige-200;
+            }
+            &:focus {
+                border: 1px solid $gray-300;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 51px;
+            right: 17px;
+            width: 26px;
+            height: 26px;
+            background-image: url(/assets/icons/ic-dropdown.svg);
+            cursor: pointer;
+        }
+    }
+
+    &__texarea {
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        textarea {
+            @include p-normal;
+            height: 152px;
+            color: $black;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid $beige-200;
+            background-color: $beige-100;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            outline: none;
+
+            &:focus {
+                border: 1px solid $gray-300;
+            }
+        }
+
+    }
+
+    &__radio {
+      margin-top: 33px;
+      display: flex;
+      flex-direction: column;
+
+      &__btn {
+        margin-top: 8px;
+        display: flex;
+        gap: 11px;
+
+        input {
+          height: 26px;
+          width: 26px;
+          margin-right: 31px;
+          }
+      }
+    }
+}

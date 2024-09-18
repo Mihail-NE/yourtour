@@ -147,9 +147,78 @@
                         src="./assets/img/card tour photo-6.jpg"
                     />
                 </div>
-
-
             </div>
+        </section>
+
+        <section class="form">
+            <div class="form__header">
+                <h2>Собери свой тур</h2>
+                <p>
+                    Идейные соображения высшего порядка,<br />а также рамки и
+                    место обучения кадров
+                </p>
+            </div>
+            <form class="form__wrap">
+                <div class="form__inputs">
+                    <div class="form__input">
+                        <label>Имя</label>
+                        <input type="text" placeholder="Введите Ваше имя" />
+                    </div>
+
+                    <div class="form__input">
+                        <label>Напрвление</label>
+                        <select aria-placeholder="Куда хотите ехать?">
+                            <option>Поход</option>
+                            <option>Велопрогулка</option>
+                            <option>Сплав</option>
+                        </select>
+                        <img src="./assets/icons/ic-dropdown.svg" />
+                    </div>
+
+                    <div class="form__input">
+                        <label>Email</label>
+                        <input type="email" placeholder="example@mail.com" />
+                    </div>
+
+                    <div class="form__input">
+                        <label>Телефон</label>
+                        <input type="tel" placeholder="+7 (___) ___-__-__" />
+                    </div>
+
+                    <div class="form__input">
+                        <label>Дата от</label>
+                        <input type="text" placeholder="ДД.ММ.ГГГГ" />
+                    </div>
+
+                    <div class="form__input">
+                        <label>Дата до</label>
+                        <input type="text" placeholder="ДД.ММ.ГГГГ" />
+                    </div>
+                </div>
+                <div class="form__texarea">
+                    <label>Комментарий</label>
+                    <textarea>asda</textarea>
+                </div>
+
+                <div class="form__radio">
+                    <label>Вам есть 18 лет?</label>
+                    <div class="form__radio__btn">
+                        <input type="radio" name="radio" /><label>Да</label>
+                        <input type="radio" name="radio" /><label>Нет</label>
+                    </div>
+                </div>
+                <div class="form__checkbox">
+                    <input type="checkbox" />
+                    <p>
+                        Нажимая кнопку, я принимаю условия
+                        <a>Лицензионного договора</a>
+                    </p>
+                </div>
+                <div class="form__buttons">
+                    <button class="form__button">Найти тур</button>
+                    <button class="form__button">Сбросить</button>
+                </div>
+            </form>
         </section>
     </body>
 </html>
