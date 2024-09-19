@@ -1,0 +1,54 @@
+.comments {
+    max-width: 1170px;
+    margin: 0 auto;
+    margin-top: 135px;
+
+    &__title {
+        h2 {
+            @include h2;
+        }
+        p {
+            @include p-normal;
+            color: $gray-300;
+            text-align: center;
+            margin-top: 30px;
+        }
+    }
+
+    &__wrap {
+      margin-top: 100px;
+      display: flex;
+      gap: 30px;
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 570px;
+      height: 673px;
+      border-radius: 50px;
+      padding: 40px;
+      background-color: $beige-200;
+    }
+
+    &__info {
+      @include p-big($black)
+    }
+
+    &__profile {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__profile-info {
+      h3 {
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 42.7px;
+        color: $black;
+      }
+      p {
+        @include p-small($gray-300)
+      }
+    }
+}

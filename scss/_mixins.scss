@@ -1,9 +1,18 @@
+@mixin h2() {
+  font-weight: 700;
+  font-size: 59px;
+  color: $black;
+  line-height: 73.16px;
+  text-align: center;
+}
+
 @mixin p-normal() {
     font-weight: 400;
     font-size: 20px;
     color: $white;
     line-height: 24.4px;
 }
+
 
 @mixin p-small($color) {
     font-weight: 400;

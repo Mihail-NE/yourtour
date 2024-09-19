@@ -5,11 +5,7 @@
 
     &__header {
         h2 {
-            font-weight: 700;
-            font-size: 59px;
-            line-height: 73.16px;
-            color: $black;
-            text-align: center;
+            @include h2;
             margin-bottom: 30px;
         }
 
