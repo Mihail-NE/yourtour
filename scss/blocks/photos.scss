@@ -1,0 +1,58 @@
+.photos {
+    max-width: fit-content;
+    margin: 0 auto;
+    margin-top: 135px;
+
+    &__title {
+        h2 {
+            @include h2;
+        }
+
+        p {
+            @include p-normal;
+            margin-top: 30px;
+            color: $gray-300;
+            text-align: center;
+        }
+    }
+
+    &__wrap {
+        margin-top: 100px;
+        display: flex;
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    &__group1 {
+        display: flex;
+        gap: 30px;
+
+        img {
+            width: 441.5px;
+            height: 301px;
+            border-radius: 50px;
+        }
+    }
+
+    &__group2 {
+      display: flex;
+      gap: 30px;
+
+      img {
+        width: 347.32px;
+          height: 301px;
+          border-radius: 50px;
+      }
+  }
+
+  &__group3 {
+    display: flex;
+    gap: 30px;
+
+    img {
+        width: 442.5px;
+        height: 301px;
+        border-radius: 50px;
+    }
+}
+}
