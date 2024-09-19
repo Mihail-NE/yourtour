@@ -366,6 +366,7 @@ body {
   font-size: 20px;
   color: #FFF;
   line-height: 24.4px;
+  font-family: Roboto;
   height: 152px;
   color: #1B1F2B;
   padding: 20px;
@@ -387,12 +388,88 @@ body {
 .form__radio__btn {
   margin-top: 8px;
   display: flex;
+  align-items: center;
   gap: 11px;
+}
+.form__radio__btn p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFF;
+  line-height: 24.4px;
+  color: #1B1F2B;
+  margin-right: 31px;
 }
 .form__radio__btn input {
   height: 26px;
   width: 26px;
-  margin-right: 31px;
+  cursor: pointer;
+}
+.form__checkbox {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 19px;
+}
+.form__checkbox input {
+  height: 26px;
+  width: 26px;
+  cursor: pointer;
+}
+.form__checkbox p {
+  font-weight: 400;
+  font-size: 17px;
+  color: #A6A6A6;
+  line-height: 24.14px;
+  letter-spacing: -1%;
+}
+.form__checkbox a {
+  font-weight: 400;
+  font-size: 17px;
+  color: #1B1F2B;
+  line-height: 24.14px;
+  letter-spacing: -1%;
+  cursor: pointer;
+}
+.form__buttons {
+  margin-top: 33px;
+  display: flex;
+  gap: 30px;
+}
+.form__button-search {
+  width: 235px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #FFF;
+  background-color: #286562;
+  line-height: 28.4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form__button-search:hover {
+  background-color: #3B7E7B;
+}
+.form__button-search:active {
+  background-color: #627F7E;
+}
+.form__button-reset {
+  width: 235px;
+  border-radius: 10px;
+  border: none;
+  padding: 15px 30px;
+  font-size: 20px;
+  color: #286562;
+  background-color: #E0F0E5;
+  line-height: 28.4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form__button-reset:hover {
+  background-color: #F1F3F2;
+}
+.form__button-reset:active {
+  background-color: #D9DFDB;
 }
 
 /*# sourceMappingURL=style.css.map */

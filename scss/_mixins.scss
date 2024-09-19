@@ -3,19 +3,38 @@
     font-size: 20px;
     color: $white;
     line-height: 24.4px;
-  }
+}
 
-  @mixin p-small($color) {
+@mixin p-small($color) {
     font-weight: 400;
     font-size: 17px;
     color: $color;
     line-height: 24.14px;
     letter-spacing: -1%;
-  }
+}
 
-  @mixin p-big($color) {
+@mixin p-big($color) {
     font-weight: 700;
     font-size: 23px;
     color: $color;
     line-height: 28.06px;
-  }
+}
+
+@mixin big-button($color, $bg-color, $hover, $active) {
+    width: 235px;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: $color;
+    background-color: $bg-color;
+    line-height: 28.4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $hover;
+    }
+    &:active {
+        background-color: $active;
+    }
+}
