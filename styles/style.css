@@ -81,7 +81,26 @@ body {
   background-size: cover;
   background-position: center;
 }
+.hero .scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+.hero .scroll .header__wrap a,
+.hero .scroll .header__wrap p {
+  color: #1B1F2B;
+}
+.hero .scroll .header__wrap svg path {
+  fill: #1B1F2B;
+}
+.hero .scroll .header__wrap a:after {
+  background-color: #1B1F2B;
+}
 .hero .header {
+  width: 100%;
   height: 88px;
   display: flex;
   align-items: center;
