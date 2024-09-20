@@ -845,10 +845,6 @@ body {
   align-items: center;
   gap: 10px;
   cursor: pointer;
-  padding-bottom: 3px;
-}
-.footer__link:hover a {
-  border-bottom: 1px solid #1B1F2B;
 }
 .footer__link:active a {
   color: #EFA501;
@@ -858,8 +854,27 @@ body {
   font-size: 20px;
   color: #FFF;
   line-height: 24.4px;
+  position: relative;
   color: #1B1F2B;
   text-decoration: none;
+}
+.footer__link a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  width: 0;
+  height: 1px;
+  background-color: #1B1F2B;
+  transition: width 0.5s;
+}
+.footer__link a:hover:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 1px;
 }
 
 /*# sourceMappingURL=style.css.map */
