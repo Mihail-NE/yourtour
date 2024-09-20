@@ -714,4 +714,43 @@ body {
   color: #EFA501;
 }
 
+.contact {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 135px;
+}
+.contact__wrap {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contact__info h3 {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42.7px;
+  color: #1B1F2B;
+}
+.contact__info p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFF;
+  line-height: 24.4px;
+  color: #A6A6A6;
+}
+.contact__info span {
+  color: #1B1F2B;
+  cursor: pointer;
+}
+.contact__info span:hover {
+  text-decoration: underline;
+}
+.contact__info span:active {
+  color: #EFA501;
+}
+
 /*# sourceMappingURL=style.css.map */
