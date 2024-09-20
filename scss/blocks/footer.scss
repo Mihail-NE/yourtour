@@ -27,12 +27,18 @@
     }
 
     &__link {
+
       display: flex;
       align-items: center;
       gap: 10px;
       cursor: pointer;
+      padding-bottom: 3px;
+
+
+
       &:hover a {
-        text-decoration: underline;
+
+        border-bottom: 1px solid $black;
       }
       &:active a {
         color: $orange-200;
@@ -42,6 +48,7 @@
         @include p-normal;
         color: $black;
         text-decoration: none;
+
       }
     }
 }

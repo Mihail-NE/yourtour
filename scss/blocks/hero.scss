@@ -91,6 +91,9 @@
               background-color: $orange-200;
               color: white;
             }
+            &:active {
+                background-color: $orange-100;
+              }
         }
     }
 }

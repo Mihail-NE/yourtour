@@ -60,6 +60,13 @@
             }
         }
 
+        select {
+            color: $gray-300;
+            option {
+                color: $black;
+            }
+        }
+
         img {
             position: absolute;
             top: 51px;
@@ -89,6 +96,8 @@
             transition: all 0.3s ease;
             cursor: pointer;
             outline: none;
+            resize: none;
+
 
             &:focus {
                 border: 1px solid $gray-300;
@@ -100,24 +109,75 @@
         margin-top: 33px;
         display: flex;
         flex-direction: column;
+    }
 
-        &__btn {
-            margin-top: 8px;
-            display: flex;
-            align-items: center;
-            gap: 11px;
+    &__radio-container {
+        margin-top: 8px;
+        display: flex;
+        gap: 31px;
+        width: 100%;
+        align-items: center;
+    }
 
-            p {
-                @include p-normal;
-                color: $black;
-                margin-right: 31px;
-            }
+    &__radio-item {
+        display: flex;
+        gap: 11px;
+        align-items: center;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28.4px;
+        text-align: left;
+    }
 
-            input {
-                height: 26px;
-                width: 26px;
-                cursor: pointer;
-            }
+    &__radio-btn {
+        width: 26px;
+        height: 26px;
+        border: 2px solid $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        outline: none;
+        cursor: pointer;
+        color: $black;
+        appearance: none;
+
+        &:checked::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            background-color: $black;
+            border-radius: 50%;
+            border: none;
+            outline: none;
+        }
+    }
+
+    &__checkbox-input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        appearance: none;
+        outline: none;
+        border: 2px solid $black;
+        position: relative;
+        width: 26px;
+        height: 26px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:checked::before {
+             position: absolute;
+            content: "";
+            width: 12.24px;
+            height: 7.12px;
+            top: 4px;
+            left: 4px;
+            border-color: $black;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            transform: rotate(-45deg);
         }
     }
 
@@ -131,7 +191,6 @@
             height: 26px;
             width: 26px;
             cursor: pointer;
-
         }
 
         p {

@@ -43,9 +43,11 @@
         gap: 30px;
     }
 
-    &__container {
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
-        padding: 50px;
         border-radius: 50px;
         cursor: pointer;
         background: linear-gradient(
@@ -70,34 +72,35 @@
             transform: scale(1.2);
         }
         &:hover button {
-          background-color: $green-400;
-          padding: 7px 20px;
-          border-radius: 50px;
-
-      }
+            background-color: $green-400;
+        }
+        &:active button {
+            background-color: $orange-200;
+        }
     }
 
-    &__item {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    &__footer {
+        padding: 30px;
+        margin-bottom: 13px;
+    }
+
+    &__button {
         button {
             @include p-big($white);
-            display: flex;
-            gap: 15px;
-            width: fit-content;
-
             background-color: inherit;
             border: none;
-            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 7px 20px;
+            border-radius: 50px;
+            gap: 15px;
             transition: all 0.3s ease;
-
-
+            cursor: pointer;
         }
     }
 
     &__info {
+        padding: 50px;
         h3 {
             width: 80%;
             font-weight: 500;
