@@ -126,4 +126,10 @@
             }
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        &__item {
+            max-width: 918px;
+          }
+    }
 }

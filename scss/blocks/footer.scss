@@ -65,4 +65,10 @@
             }
         }
     }
+
+    @media screen and (max-width: 1024px) {
+        &__wrap {
+            max-width: 918px;
+          }
+    }
 }

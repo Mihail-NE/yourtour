@@ -16,6 +16,8 @@
     }
 
     &__wrap {
+      margin: 0 auto;
+      width: fit-content;
       margin-top: 100px;
       display: flex;
       gap: 30px;
@@ -51,4 +53,18 @@
         @include p-small($gray-300)
       }
     }
+
+    @media screen and (max-width: 1024px) {
+      &__wrap {
+        gap: 18px;
+      }
+      &__info {
+        max-width: 370px;
+      }
+
+      &__item {
+        max-width: fit-content;
+        height: 841px;
+      }
+  }
 }

@@ -9,10 +9,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgba(#F3EFE8, 0.6);
+        background-color: rgba(#f3efe8, 0.6);
         backdrop-filter: blur(20px);
         z-index: 999;
-
 
         .header__wrap {
             a,
@@ -28,7 +27,6 @@
             a:after {
                 background-color: $black;
             }
-
         }
     }
 
@@ -92,6 +90,10 @@
         justify-content: center;
         gap: 50px;
 
+        &__info {
+            max-width: 562px;
+        }
+
         h1 {
             font-weight: 700;
             font-size: 96px;
@@ -123,5 +125,25 @@
                 background-color: $orange-100;
             }
         }
+    }
+
+    @media screen and (max-width: 1024px) {
+        background-image: url(/assets/img/header-small.jpg);
+        .header {
+            &__wrap {
+                max-width: 910px;
+                ul {
+                    gap: 30px;
+                }
+            }
+        }
+        .content {
+            &__info {
+                max-width: 442px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
     }
 }
