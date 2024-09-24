@@ -71,4 +71,36 @@
             max-width: 918px;
           }
     }
+
+    @media screen and (max-width: 360px) {
+        margin-top: 75px;
+        height: 95px;
+        pointer-events: none;
+
+        &__wrap {
+            max-width: 317px;
+            flex-direction: column;
+            gap: 7px;
+          }
+
+          &__social {
+            p {
+                @include p-normal-m;
+                color: $gray-300;
+            }
+        }
+
+        &__links {
+            gap: 15px;
+        }
+
+        &__link {
+            gap: 5px;
+
+            a {
+                @include p-normal-m;
+                color: $black;
+            }
+        }
+    }
 }

@@ -121,4 +121,55 @@
             gap: 18px;
         }
     }
+
+    @media screen and (max-width: 360px) {
+        padding-top: 75px;
+        pointer-events: none;
+        &__header {
+            h2 {
+                @include h2-m;
+            }
+            a {
+                @include p-big-m;
+            }
+            ul {
+                max-width: 277px;
+                gap: 10px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+
+        &__content {
+            margin-top: 50px;
+            grid-template-rows: repeat(6, 318px);
+            grid-template-columns: repeat(1, 318px);
+
+            h3 {
+                @include h3-m;
+                text-align: start;
+                color: $white;
+            }
+            p {
+                @include p-small-m;
+            }
+        }
+
+        &__item {
+            border-radius: 20px;
+        }
+        &__info,
+        &__footer {
+            padding: 25px;
+            margin-bottom: 0px;
+        }
+        &__button {
+            button {
+                @include p-big-m;
+                padding: 0;
+            }
+        }
+
+
+    }
 }

@@ -1,9 +1,52 @@
+@mixin h1() {
+    font-weight: 700;
+    font-size: 96px;
+    color: $black;
+    line-height: 104.64px;
+    letter-spacing: 2%;
+    text-align: center;
+}
+
+@mixin h1-m() {
+    font-weight: 700;
+    font-size: 34px;
+    color: $black;
+    line-height: 38.08px;
+    letter-spacing: 2%;
+    text-align: center;
+}
+
 @mixin h2() {
-  font-weight: 700;
-  font-size: 59px;
-  color: $black;
-  line-height: 73.16px;
-  text-align: center;
+    font-weight: 700;
+    font-size: 59px;
+    color: $black;
+    line-height: 73.16px;
+    text-align: center;
+}
+@mixin h2-m() {
+    font-weight: 700;
+    font-size: 34px;
+    color: $black;
+    line-height: 38.08px;
+    letter-spacing: 2%;
+    text-align: center;
+}
+
+@mixin h3() {
+    font-weight: 500;
+    font-size: 35px;
+    color: $black;
+    line-height: 42.7px;
+    text-align: center;
+}
+
+@mixin h3-m() {
+    font-weight: 700;
+    font-size: 23px;
+    color: $black;
+    line-height: 27.6px;
+    letter-spacing: 4%;
+    text-align: center;
 }
 
 @mixin p-normal() {
@@ -13,6 +56,12 @@
     line-height: 24.4px;
 }
 
+@mixin p-normal-m() {
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+    line-height: 22.72px;
+}
 
 @mixin p-small($color) {
     font-weight: 400;
@@ -22,11 +71,24 @@
     letter-spacing: -1%;
 }
 
+@mixin p-small-m {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22.72px;
+    letter-spacing: -1%;
+}
+
 @mixin p-big($color) {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 23px;
     color: $color;
     line-height: 28.06px;
+}
+
+@mixin p-big-m {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22.72px;
 }
 
 @mixin big-button($color, $bg-color, $hover, $active) {

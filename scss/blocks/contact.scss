@@ -14,10 +14,9 @@
         gap: 20px;
 
         h3 {
-            font-weight: 500;
-            font-size: 35px;
-            line-height: 42.7px;
+            @include h3-m;
             color: $black;
+            text-align: start
         }
 
         p {
@@ -34,6 +33,30 @@
             }
             &:active {
                 color: $orange-200;
+            }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        pointer-events: none;
+        margin-top: 75px;
+        &__wrap {
+            flex-direction: column;
+        }
+        &__img {
+            height: 133px;
+            width: 130px;
+        }
+
+        &__info {
+            h3 {
+               @include h3-m;
+            }
+
+            p {
+                @include p-normal-m;
+                color: $gray-300;
+                text-align: center;
             }
         }
     }

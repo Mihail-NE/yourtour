@@ -17,10 +17,10 @@
     }
 
     &__wrap {
-      margin-top: 100px;
-      display: flex;
-      flex-direction: column;
-      gap: 50px;
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
     }
 
     &__item {
@@ -54,21 +54,21 @@
         }
 
         &:hover button {
-          background-color: $green-400;
+            background-color: $green-400;
         }
         &:active button {
-          background-color: $orange-200;
-          color: $white;
+            background-color: $orange-200;
+            color: $white;
         }
     }
 
     &__info {
         padding: 60px;
+        max-width: 554px;
         h3 {
-            font-weight: 500;
-            font-size: 35px;
-            line-height: 42.7px;
-            color: $white;
+            @include h3-m;
+                color: $white;
+                text-align: start;
         }
         p {
             @include p-normal;
@@ -114,15 +114,15 @@
             gap: 35px;
 
             a {
-              @include p-normal;
-              color: $white;
-              text-decoration: none;
-              &:hover {
-                text-decoration: underline;
-              }
-              &:active {
-                color: $orange-200;
-              }
+                @include p-normal;
+                color: $white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+                &:active {
+                    color: $orange-200;
+                }
             }
         }
     }
@@ -130,6 +130,69 @@
     @media screen and (max-width: 1024px) {
         &__item {
             max-width: 918px;
-          }
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        margin-top: 75px;
+        max-width: 318px;
+        pointer-events: none;
+
+        &__wrap {
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        &__title {
+            h2 {
+                @include h2-m;
+            }
+
+            p {
+                @include p-normal-m;
+                margin-top: 20px;
+                color: $gray-300;
+            }
+        }
+        &__item {
+            max-width: 318px;
+            height: 455px;
+            border-radius: 20px;
+        }
+
+        &__info {
+            padding: 30px;
+            max-width: 263px;
+
+            h3 {
+                @include h3-m;
+                max-width: 200px;
+                color: $white;
+                text-align: start;
+            }
+            p {
+                @include p-normal-m;
+                margin-top: 20px;
+            }
+
+            li {
+                @include p-normal-m;
+            }
+        }
+
+        &__links {
+            display: none;
+        }
+
+        &__footer {
+            padding: 30px;
+        }
+
+        &__button {
+            button {
+                @include p-big-m;
+                padding: 0;
+            }
+        }
     }
 }
