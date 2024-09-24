@@ -1,6 +1,6 @@
 .hero {
     height: 100vh;
-    background-image: url("/YourTour/assets/img/header-img.png");
+    background-image: url("/yourtour/assets/img/header-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -127,7 +127,7 @@
     }
 
     @media screen and (max-width: 1024px) {
-        background-image: url(/assets/img/header-small.jpg);
+        background-image: url(/yourtour/assets/img/header-small.jpg);
         .header {
             &__wrap {
                 max-width: 910px;
