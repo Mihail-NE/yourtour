@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const element = document.querySelector(selector);
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
-        } else {
-            console.error(`Element with selector "${selector}" not found`);
         }
     }
 
@@ -20,8 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
                 scrollToElement(selector);
             });
-        } else {
-            console.error(`Link element not found`);
         }
     }
 
@@ -38,7 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
                 header.classList.remove("scroll");
             }
         });
-    } else {
-        console.error("Header element not found");
     }
 });

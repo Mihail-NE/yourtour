@@ -36,6 +36,8 @@
         gap: 30px;
     }
 
+
+
     &__input {
         position: relative;
         display: flex;
@@ -62,11 +64,14 @@
             }
         }
 
+
+
         select {
             color: $gray-300;
-
-
             option {
+                color: $black;
+            }
+            &:focus {
                 color: $black;
             }
         }
@@ -82,6 +87,9 @@
             pointer-events: none;
         }
     }
+
+
+
 
     &__texarea {
         margin-top: 33px;

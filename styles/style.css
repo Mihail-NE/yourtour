@@ -508,6 +508,9 @@ body {
 .form__input select option {
   color: #1B1F2B;
 }
+.form__input select:focus {
+  color: #1B1F2B;
+}
 .form__input img {
   position: absolute;
   top: 51px;
