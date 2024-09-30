@@ -3,7 +3,7 @@
     font-size: 96px;
     color: $black;
     line-height: 104.64px;
-    letter-spacing: 2%;
+    letter-spacing: 1.92px;
     text-align: center;
 }
 
@@ -12,7 +12,7 @@
     font-size: 34px;
     color: $black;
     line-height: 38.08px;
-    letter-spacing: 2%;
+    letter-spacing: 1.92px;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     font-size: 34px;
     color: $black;
     line-height: 38.08px;
-    letter-spacing: 2%;
+    letter-spacing: 1.92px;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@
     font-size: 23px;
     color: $black;
     line-height: 27.6px;
-    letter-spacing: 4%;
+    letter-spacing: 4px;
     text-align: center;
 }
 
@@ -53,7 +53,7 @@
     font-weight: 400;
     font-size: 20px;
     color: $white;
-    line-height: 24.4px;
+    line-height: 28.4px;
 }
 
 @mixin p-normal-m() {
@@ -68,18 +68,18 @@
     font-size: 17px;
     color: $color;
     line-height: 24.14px;
-    letter-spacing: -1%;
+    letter-spacing: -0.17px;
 }
 
 @mixin p-small-m {
     font-weight: 400;
     font-size: 16px;
     line-height: 22.72px;
-    letter-spacing: -1%;
+    letter-spacing: -0.17px;
 }
 
 @mixin p-big($color) {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 23px;
     color: $color;
     line-height: 28.06px;

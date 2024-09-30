@@ -66,13 +66,15 @@
                         <li><a href="#" id="link3">Отзывы</a></li>
                         <li><a href="#" id="link4">Истории</a></li>
                     </ul>
-                    <p>+7 999 999 99 99</p>
+                    <a>+7 999 999 99 99</a>
                 </div>
             </header>
 
             <div class="content">
-                <h1>Идеальные<br />путешествия<br />существуют</h1>
-                <div class="content__info">
+                <div class="content__info-title">
+                    <h1>Идеальные путешествия существуют</h1>
+                </div>
+                <div class="content__info-subtitle">
                     <p>
                         Идейные соображения высшего порядка, а также рамки и
                         место обучения кадров
@@ -99,7 +101,10 @@
             <div class="category__content">
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -118,7 +123,10 @@
 
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -137,7 +145,10 @@
 
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -156,7 +167,10 @@
 
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -175,7 +189,10 @@
 
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -194,7 +211,10 @@
 
                 <div class="category__item">
                     <div class="category__info">
-                        <h3>Путешествие в горы</h3>
+                        <h3>
+                            Путешествие<br />
+                            в горы
+                        </h3>
                         <p>от 80 000 руб</p>
                     </div>
                     <div class="category__footer">
@@ -225,45 +245,63 @@
                 <div class="form__inputs">
                     <div class="form__input">
                         <label>Имя</label>
-                        <input type="text" placeholder="Введите Ваше имя" />
+                        <input
+                            required
+                            type="text"
+                            placeholder="Введите Ваше имя"
+                        />
                     </div>
 
                     <div class="form__input">
                         <label>Напрвление</label>
-                        <select class="form__select" id="directionSelect">
-                            <option disabled selected hidden>
+                        <select
+                            class="form__select form__select-placeholde"
+                            id="directionSelect"
+                        >
+                            <option value="none" hidden>
                                 Куда хотите ехать?
                             </option>
-                            <option>Поход</option>
-                            <option>Велопрогулка</option>
-                            <option>Сплав</option>
+                            <option value="hike">Поход</option>
+                            <option value="bike">Велопрогулка</option>
+                            <option value="rafting">Сплав</option>
                         </select>
-                        <img src="./assets/icons/ic-dropdown.svg" />
+                        <img
+                            id="directionSelect"
+                            src="./assets/icons/ic-dropdown.svg"
+                        />
                     </div>
 
                     <div class="form__input">
                         <label>Email</label>
-                        <input type="email" placeholder="example@mail.com" />
+                        <input
+                            required
+                            type="email"
+                            placeholder="example@mail.com"
+                        />
                     </div>
 
                     <div class="form__input">
                         <label>Телефон</label>
-                        <input type="tel" placeholder="+7 (___) ___-__-__" />
+                        <input
+                            required
+                            type="tel"
+                            placeholder="+7 (_ _ _)_ _ _-_ _-_ _"
+                        />
                     </div>
 
                     <div class="form__input">
                         <label>Дата от</label>
-                        <input type="text" placeholder="ДД.ММ.ГГГГ" />
+                        <input required type="text" placeholder="ДД.ММ.ГГГГ" />
                     </div>
 
                     <div class="form__input">
                         <label>Дата до</label>
-                        <input type="text" placeholder="ДД.ММ.ГГГГ" />
+                        <input required type="text" placeholder="ДД.ММ.ГГГГ" />
                     </div>
                 </div>
                 <div class="form__texarea">
                     <label>Комментарий</label>
-                    <textarea></textarea>
+                    <textarea required></textarea>
                 </div>
 
                 <div class="form__footer">
@@ -521,7 +559,7 @@
                     </h3>
                     <p>
                         Напиши на почту и узнай подробности<br />
-                        на <span>yourtour@gmail.com </span>
+                        на <a>yourtour@gmail.com </a>
                     </p>
                 </div>
             </div>

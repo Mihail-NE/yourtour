@@ -1,6 +1,6 @@
 .hero {
-    height: 100vh;
-    background-image: url("/yourtour/assets/img/header-img.png");
+    height: 831px;
+    background-image: url("/assets/img/header-img.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -49,15 +49,13 @@
                 gap: 50px;
             }
 
-            a,
-            p {
+            a {
                 position: relative;
                 text-decoration: none;
+                cursor: pointer;
                 @include p-normal;
             }
-            p {
-                cursor: pointer;
-            }
+
 
             a:after {
                 content: "";
@@ -89,16 +87,23 @@
         justify-content: center;
         gap: 50px;
 
-        &__info {
-            max-width: 562px;
+        &__info-title {
+            width: 768px;
+            height: 315px;
+            text-align: center;
+        }
+
+        &__info-subtitle {
+            width: 562px;
+            height: 56px;
         }
 
         h1 {
             font-weight: 700;
             font-size: 96px;
             line-height: 104.64px;
-            letter-spacing: 2%;
-            text-align: center;
+            letter-spacing: 1.92px;
+            // text-align: center;
             color: $white;
         }
 
