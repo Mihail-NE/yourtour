@@ -1,10 +1,11 @@
 .hero {
     position: relative;
     height: 831px;
-    background-image: url("/assets/img/header-img.png");
+    background-image: url("/assets/img/header-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
 
     &__content {
         padding-top: 207px;
@@ -51,7 +52,7 @@
 
 
     @media screen and (max-width: 1024px) {
-        background-image: url(/yourtour/assets/img/header-small.jpg);
+        background-image: url(/yourtour/assets/img/header-image-small.jpg);
         .header {
             &__wrap {
                 max-width: 910px;

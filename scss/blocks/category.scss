@@ -59,6 +59,16 @@
             rgba(0, 0, 0, 0.06) 48.44%,
             rgba(0, 0, 0, 0.5) 100%
         );
+
+        &:hover .category__item-image {
+            transform: scale(1.2);
+        }
+        &:hover .category__button-more {
+            background-color: $green-400;
+        }
+        &:active .category__button-more {
+            background-color: $orange-200;
+        }
     }
 
     &__info {
@@ -108,16 +118,9 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
+
     }
-    &:hover .category__item-image {
-        transform: scale(1.2);
-    }
-    &:hover .category__button-more {
-        background-color: $green-400;
-    }
-    &:active .category__button-more {
-        background-color: $orange-200;
-    }
+
 
     @media screen and (max-width: 1024px) {
         &__content {

@@ -155,7 +155,7 @@ body {
 .hero {
   position: relative;
   height: 831px;
-  background-image: url("/assets/img/header-img.png");
+  background-image: url("/assets/img/header-image.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -211,7 +211,7 @@ body {
 }
 @media screen and (max-width: 1024px) {
   .hero {
-    background-image: url(/yourtour/assets/img/header-small.jpg);
+    background-image: url(/yourtour/assets/img/header-image-small.jpg);
   }
   .hero .header__wrap {
     max-width: 910px;
@@ -326,6 +326,15 @@ body {
   overflow: hidden;
   background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.06) 48.44%, rgba(0, 0, 0, 0.5) 100%);
 }
+.category__item:hover .category__item-image {
+  transform: scale(1.2);
+}
+.category__item:hover .category__button-more {
+  background-color: #286562;
+}
+.category__item:active .category__button-more {
+  background-color: #EFA501;
+}
 .category__info {
   padding: 50px 50px 0 50px;
   width: 200px;
@@ -376,15 +385,6 @@ body {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
-}
-.category:hover .category__item-image {
-  transform: scale(1.2);
-}
-.category:hover .category__button-more {
-  background-color: #286562;
-}
-.category:active .category__button-more {
-  background-color: #EFA501;
 }
 @media screen and (max-width: 1024px) {
   .category__content {
