@@ -74,7 +74,78 @@ body {
   overflow-x: hidden;
 }
 
+.header {
+  position: absolute;
+  width: 100%;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+.header__wrap {
+  height: 32px;
+  width: 1168px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav-list {
+  display: flex;
+  gap: 50px;
+}
+.header__nav-item a, .header__phone a {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFF;
+  line-height: 28.4px;
+}
+.header__nav-item a:after, .header__phone a:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background-color: #FFF;
+  transition: width 0.5s;
+}
+.header__nav-item a:hover:after, .header__phone a:hover:after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  height: 1px;
+}
+
+.scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(243, 239, 232, 0.6);
+  backdrop-filter: blur(20px);
+  z-index: 999;
+}
+.scroll .header__logo {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(18%) saturate(1366%) hue-rotate(201deg) brightness(97%) contrast(97%);
+}
+.scroll .header__wrap a {
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFF;
+  line-height: 28.4px;
+  color: #1B1F2B;
+}
+.scroll .header__wrap a:after {
+  background-color: #1B1F2B;
+}
+
 .hero {
+  position: relative;
   height: 831px;
   background-image: url("/assets/img/header-img.png");
   background-repeat: no-repeat;
@@ -98,51 +169,6 @@ body {
 }
 .hero .scroll .header__wrap a:after {
   background-color: #1B1F2B;
-}
-.hero .header {
-  width: 100%;
-  height: 88px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.hero .header__wrap {
-  height: 32px;
-  width: 1168px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.hero .header__wrap ul {
-  display: flex;
-  gap: 50px;
-}
-.hero .header__wrap a {
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-  font-weight: 400;
-  font-size: 20px;
-  color: #FFF;
-  line-height: 28.4px;
-}
-.hero .header__wrap a:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -3px;
-  width: 0;
-  height: 1px;
-  background-color: #FFF;
-  transition: width 0.5s;
-}
-.hero .header__wrap a:hover:after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: -3px;
-  height: 1px;
 }
 .hero .content {
   padding-top: 119px;

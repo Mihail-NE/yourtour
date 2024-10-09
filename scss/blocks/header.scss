@@ -1,0 +1,76 @@
+.header {
+    position: absolute;
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+
+    &__wrap {
+        height: 32px;
+        width: 1168px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__nav-list {
+        display: flex;
+        gap: 50px;
+    }
+
+    &__nav-item,
+    &__phone {
+        a {
+            position: relative;
+            text-decoration: none;
+            cursor: pointer;
+            @include p-normal;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+                width: 0;
+                height: 1px;
+                background-color: $white;
+                transition: width 0.5s;
+            }
+
+            &:hover:after {
+                content: "";
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                height: 1px;
+            }
+        }
+    }
+}
+
+.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(#f3efe8, 0.6);
+    backdrop-filter: blur(20px);
+    z-index: 999;
+
+    // изменяет цвет логотиппа на $black
+    .header__logo {
+        filter: brightness(0) saturate(100%) invert(12%) sepia(18%)
+            saturate(1366%) hue-rotate(201deg) brightness(97%) contrast(97%);
+    }
+
+    .header__wrap {
+        a {
+          @include p-normal;
+            color: $black;
+        }
+        a:after {
+            background-color: $black;
+        }
+    }
+}
