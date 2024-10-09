@@ -6,115 +6,32 @@
     background-size: cover;
     background-position: center;
 
-    .scroll {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: rgba(#f3efe8, 0.6);
-        backdrop-filter: blur(20px);
-        z-index: 999;
-
-        .header__wrap {
-            a,
-            p {
-                color: $black;
-            }
-            svg {
-                path {
-                    fill: $black;
-                }
-            }
-
-            a:after {
-                background-color: $black;
-            }
-        }
-    }
-
-    // .header {
-    //     width: 100%;
-    //     height: 88px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-
-    //     &__wrap {
-    //         height: 32px;
-    //         width: 1168px;
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-between;
-
-    //         ul {
-    //             display: flex;
-    //             gap: 50px;
-    //         }
-
-    //         a {
-    //             position: relative;
-    //             text-decoration: none;
-    //             cursor: pointer;
-    //             @include p-normal;
-    //         }
-
-
-    //         a:after {
-    //             content: "";
-    //             position: absolute;
-    //             right: 0;
-    //             bottom: -3px;
-    //             width: 0;
-    //             height: 1px;
-    //             background-color: $white;
-    //             transition: width 0.5s;
-    //         }
-
-    //         a:hover:after {
-    //             content: "";
-    //             width: 100%;
-    //             position: absolute;
-    //             left: 0;
-    //             bottom: -3px;
-    //             height: 1px;
-    //         }
-    //     }
-    // }
-
-    .content {
-        padding-top: 119px;
+    &__content {
+        padding-top: 207px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 50px;
+    }
 
-        &__info-title {
-            width: 768px;
-            height: 315px;
-            text-align: center;
-        }
+    &__title {
+        @include h1;
+        color: $white;
+        width: 768px;
+        height: 315px;
+        text-align: center;
+    }
 
-        &__info-subtitle {
-            width: 562px;
-            height: 56px;
-        }
+    &__subtitle {
+        @include p-normal;
+        text-align: center;
+        width: 562px;
+        height: 56px;
+    }
 
-        h1 {
-            font-weight: 700;
-            font-size: 96px;
-            line-height: 104.64px;
-            letter-spacing: 1.92px;
-            // text-align: center;
-            color: $white;
-        }
-
-        p {
-            @include p-normal;
-            text-align: center;
-        }
-
-        button {
-            @include p-small($black);
+    &__button {
+        @include p-small($black);
             border-radius: 10px;
             padding: 5px 20px;
             border: none;
@@ -129,8 +46,9 @@
             &:active {
                 background-color: $orange-100;
             }
-        }
     }
+
+
 
     @media screen and (max-width: 1024px) {
         background-image: url(/yourtour/assets/img/header-small.jpg);

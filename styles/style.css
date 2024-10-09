@@ -74,6 +74,14 @@ body {
   overflow-x: hidden;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 135px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -152,56 +160,36 @@ body {
   background-size: cover;
   background-position: center;
 }
-.hero .scroll {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(243, 239, 232, 0.6);
-  backdrop-filter: blur(20px);
-  z-index: 999;
-}
-.hero .scroll .header__wrap a,
-.hero .scroll .header__wrap p {
-  color: #1B1F2B;
-}
-.hero .scroll .header__wrap svg path {
-  fill: #1B1F2B;
-}
-.hero .scroll .header__wrap a:after {
-  background-color: #1B1F2B;
-}
-.hero .content {
-  padding-top: 119px;
+.hero__content {
+  padding-top: 207px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 50px;
 }
-.hero .content__info-title {
+.hero__title {
+  font-weight: 700;
+  font-size: 96px;
+  color: #1B1F2B;
+  line-height: 104.64px;
+  letter-spacing: 1.92px;
+  text-align: center;
+  color: #FFF;
   width: 768px;
   height: 315px;
   text-align: center;
 }
-.hero .content__info-subtitle {
-  width: 562px;
-  height: 56px;
-}
-.hero .content h1 {
-  font-weight: 700;
-  font-size: 96px;
-  line-height: 104.64px;
-  letter-spacing: 1.92px;
-  color: #FFF;
-}
-.hero .content p {
+.hero__subtitle {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
   line-height: 28.4px;
   text-align: center;
+  width: 562px;
+  height: 56px;
 }
-.hero .content button {
+.hero__button {
   font-weight: 400;
   font-size: 17px;
   color: #1B1F2B;
@@ -214,11 +202,11 @@ body {
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.hero .content button:hover {
+.hero__button:hover {
   background-color: #EFA501;
   color: white;
 }
-.hero .content button:active {
+.hero__button:active {
   background-color: #F8E6BE;
 }
 @media screen and (max-width: 1024px) {
