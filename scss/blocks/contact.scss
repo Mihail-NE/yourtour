@@ -1,20 +1,27 @@
 .contact {
     max-width: fit-content;
     margin: 0 auto;
-    margin-top: 135px;
+
     &__wrap {
         display: flex;
         align-items: center;
         gap: 30px;
     }
 
+    &__image {
+        height: 370px;
+        width: 370px;
+        border-radius: 50px;
+    }
+
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 22px;
+        width: 371px;
 
         h3 {
-            @include h3-m;
+            @include h3;
             color: $black;
             text-align: start
         }
