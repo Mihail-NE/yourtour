@@ -109,7 +109,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
 }
 .header__nav-item a:after, .header__phone a:after {
   content: "";
@@ -145,7 +145,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #1B1F2B;
 }
 .scroll .header__wrap a:after {
@@ -184,7 +184,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   text-align: center;
   width: 562px;
   height: 56px;
@@ -473,7 +473,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #A6A6A6;
   text-align: center;
   width: 400px;
@@ -491,26 +491,27 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #1B1F2B;
 }
 .form__inputs {
   display: grid;
-  padding: 70px;
-  grid-template-columns: 1fr 1fr;
+  padding: 71px 70px 0 70px;
+  display: flex;
+  flex-wrap: wrap;
   gap: 33px 30px;
 }
 .form__input {
   position: relative;
-  max-width: 500px;
+  width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 .form__select-icon {
   position: absolute;
-  top: 55px;
-  right: 20px;
+  top: 57px;
+  right: 21px;
   width: 26px;
   height: 26px;
   background-image: url(/assets/icons/ic-dropdown.svg);
@@ -522,13 +523,12 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
+  font-family: "Roboto";
+  font-style: normal;
   appearance: none;
   color: #1B1F2B;
   padding: 19px;
-  font-size: 19.4px;
-  line-height: 28px;
-  letter-spacing: 0px;
   border-radius: 10px;
   border: 1px solid #F4F0E9;
   background-color: #F9F7F4;
@@ -550,7 +550,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #1B1F2B;
   appearance: none;
   padding: 20px;
@@ -567,16 +567,19 @@ body {
   border: 1px solid #A6A6A6;
 }
 .form__textarea {
+  margin-top: 33px;
   display: flex;
   flex-direction: column;
+  width: 1030px;
+  height: 188px;
   gap: 8px;
   padding: 0 70px;
 }
-.form__textarea textarea {
+.form__textarea-field {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   font-family: Roboto;
   height: 152px;
   color: #1B1F2B;
@@ -589,39 +592,40 @@ body {
   outline: none;
   resize: none;
 }
-.form__textarea textarea:focus {
+.form__textarea-field:focus {
   border: 1px solid #A6A6A6;
 }
 .form__label {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #1B1F2B;
 }
 .form__radio {
   margin-top: 33px;
   display: flex;
   flex-direction: column;
+  padding: 0 70px;
 }
 .form__radio-container {
-  margin-top: 8px;
+  margin-top: 7px;
   display: flex;
   gap: 31px;
-  width: 100%;
   align-items: center;
 }
 .form__radio-item {
   display: flex;
   gap: 11px;
   align-items: center;
+  justify-content: left;
   cursor: pointer;
   font-size: 20px;
   font-weight: 400;
   line-height: 28.4px;
-  text-align: left;
 }
 .form__radio-btn {
+  margin: 0;
   width: 26px;
   height: 26px;
   border: 2px solid #1B1F2B;
@@ -644,6 +648,7 @@ body {
   outline: none;
 }
 .form__checkbox-input {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -669,25 +674,29 @@ body {
   transform: rotate(-45deg);
 }
 .form__checkbox {
-  margin-top: 34px;
+  margin-top: 33px;
   display: flex;
   align-items: center;
   gap: 19px;
 }
-.form__checkbox p {
+.form__checkbox-label {
   font-weight: 400;
   font-size: 17px;
   color: #A6A6A6;
   line-height: 24.14px;
   letter-spacing: -0.17px;
 }
-.form__checkbox a {
+.form__checkbox-link {
   font-weight: 400;
   font-size: 17px;
   color: #1B1F2B;
   line-height: 24.14px;
   letter-spacing: -0.17px;
   cursor: pointer;
+  text-decoration: none;
+}
+.form__checkbox-link:hover {
+  text-decoration: underline;
 }
 .form__buttons {
   margin-top: 33px;
@@ -889,7 +898,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #A6A6A6;
   text-align: center;
   margin-top: 30px;
@@ -1020,7 +1029,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   margin-top: 30px;
   color: #A6A6A6;
   text-align: center;
@@ -1167,7 +1176,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   margin-top: 30px;
   color: #A6A6A6;
   text-align: center;
@@ -1228,14 +1237,14 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   margin-top: 37px;
 }
 .story__info li {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
 }
 .story__info li::before {
   content: "•";
@@ -1272,7 +1281,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #FFF;
   text-decoration: none;
 }
@@ -1389,7 +1398,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #A6A6A6;
 }
 .contact__info a {
@@ -1451,7 +1460,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   color: #A6A6A6;
 }
 .footer__links {
@@ -1471,7 +1480,7 @@ body {
   font-weight: 400;
   font-size: 20px;
   color: #FFF;
-  line-height: 28.4px;
+  line-height: 28px;
   position: relative;
   color: #1B1F2B;
   text-decoration: none;

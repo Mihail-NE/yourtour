@@ -36,23 +36,24 @@
 
     &__inputs {
         display: grid;
-        padding: 70px;
-        grid-template-columns: 1fr 1fr;
+        padding: 71px 70px 0 70px;
+        display: flex;
+        flex-wrap: wrap;
         gap: 33px 30px;
     }
 
     &__input {
         position: relative;
-        max-width: 500px;
+        width: 500px;
         display: flex;
         flex-direction: column;
-        gap: 7px;
+        gap: 8px;
     }
 
     &__select-icon {
         position: absolute;
-        top: 55px;
-        right: 20px;
+        top: 57px;
+        right: 21px;
         width: 26px;
         height: 26px;
         background-image: url(/assets/icons/ic-dropdown.svg);
@@ -63,12 +64,11 @@
     &__input-field,
     .form__select {
         @include p-normal;
+        font-family: "Roboto";
+        font-style: normal;
         appearance: none;
         color: $black;
         padding: 19px;
-        font-size: 19.4px;
-        line-height: 28px;
-        letter-spacing: 0px;
         border-radius: 10px;
         border: 1px solid $beige-200;
         background-color: $beige-100;
@@ -104,29 +104,31 @@
     }
 
     &__textarea {
-        // margin-top: 33px;
+        margin-top: 33px;
         display: flex;
         flex-direction: column;
+        width: 1030px;
+        height: 188px;
         gap: 8px;
         padding: 0 70px;
+    }
 
-        textarea {
-            @include p-normal;
-            font-family: Roboto;
-            height: 152px;
-            color: $black;
-            padding: 20px;
-            border-radius: 10px;
-            border: 1px solid $beige-200;
-            background-color: $beige-100;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            outline: none;
-            resize: none;
+    &__textarea-field {
+        @include p-normal;
+        font-family: Roboto;
+        height: 152px;
+        color: $black;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid $beige-200;
+        background-color: $beige-100;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        resize: none;
 
-            &:focus {
-                border: 1px solid $gray-300;
-            }
+        &:focus {
+            border: 1px solid $gray-300;
         }
     }
 
@@ -139,13 +141,13 @@
         margin-top: 33px;
         display: flex;
         flex-direction: column;
+        padding: 0 70px;
     }
 
     &__radio-container {
-        margin-top: 8px;
+        margin-top: 7px;
         display: flex;
         gap: 31px;
-        width: 100%;
         align-items: center;
     }
 
@@ -153,14 +155,15 @@
         display: flex;
         gap: 11px;
         align-items: center;
+        justify-content: left;
         cursor: pointer;
         font-size: 20px;
         font-weight: 400;
         line-height: 28.4px;
-        text-align: left;
     }
 
     &__radio-btn {
+        margin: 0;
         width: 26px;
         height: 26px;
         border: 2px solid $black;
@@ -185,6 +188,7 @@
     }
 
     &__checkbox-input {
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -212,18 +216,22 @@
     }
 
     &__checkbox {
-        margin-top: 34px;
+        margin-top: 33px;
         display: flex;
         align-items: center;
         gap: 19px;
+    }
 
-        p {
-            @include p-small($gray-300);
-        }
+    &__checkbox-label {
+        @include p-small($gray-300);
+    }
 
-        a {
-            @include p-small($black);
-            cursor: pointer;
+    &__checkbox-link {
+        @include p-small($black);
+        cursor: pointer;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
         }
     }
 
