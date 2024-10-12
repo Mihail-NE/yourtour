@@ -6,7 +6,6 @@
     background-size: cover;
     background-position: center;
 
-
     &__content {
         padding-top: 207px;
         display: flex;
@@ -33,38 +32,27 @@
 
     &__button {
         @include p-small($black);
-            border-radius: 10px;
-            padding: 5px 20px;
-            border: none;
-            background-color: $white;
-            transition: all 0.3s ease;
-            cursor: pointer;
+        border-radius: 10px;
+        padding: 5px 20px;
+        border: none;
+        background-color: $white;
+        transition: all 0.3s ease;
+        cursor: pointer;
 
-            &:hover {
-                background-color: $orange-200;
-                color: white;
-            }
-            &:active {
-                background-color: $orange-100;
-            }
+        &:hover {
+            background-color: $orange-200;
+            color: white;
+        }
+        &:active {
+            background-color: $orange-100;
+        }
     }
 
-
-
     @media screen and (max-width: 1024px) {
-        background-image: url(/yourtour/assets/img/header-image-small.jpg);
-        .header {
-            &__wrap {
-                max-width: 910px;
-                ul {
-                    gap: 30px;
-                }
-            }
-        }
-        .content {
-            &__info {
-                max-width: 442px;
-            }
+        background-image: url(/assets/img/header-image-small.jpg);
+
+        &__subtitle {
+            max-width: 400px;
         }
     }
 

@@ -35,7 +35,6 @@
     }
 
     &__inputs {
-        display: grid;
         padding: 71px 70px 0 70px;
         display: flex;
         flex-wrap: wrap;
@@ -252,16 +251,23 @@
     @media screen and (max-width: 1024px) {
         &__wrap {
             width: 798px;
-            padding: 60px;
+            height: 845px;
+            padding: 61px;
         }
         &__inputs {
             gap: 20px;
+            row-gap: 33px;
         }
         &__input {
-            input,
-            select {
-                max-width: 389px;
-            }
+            max-width: 389px;
+        }
+        &__textarea,
+        .form__inputs,
+        .form__radio {
+            padding: 0;
+        }
+        &__checkbox {
+            gap: 11px;
         }
     }
 

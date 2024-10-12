@@ -19,33 +19,42 @@
         gap: 50px;
     }
 
-    &__nav-item,
-    &__phone {
-        a {
-            position: relative;
-            text-decoration: none;
-            cursor: pointer;
-            @include p-normal;
+    &__nav-link,
+    .header__phone {
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        @include p-normal;
 
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                bottom: -3px;
-                width: 0;
-                height: 1px;
-                background-color: $white;
-                transition: width 0.5s;
-            }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: $white;
+            transition: width 0.5s;
+        }
 
-            &:hover:after {
-                content: "";
-                width: 100%;
-                position: absolute;
-                left: 0;
-                bottom: -3px;
-                height: 1px;
-            }
+        &:hover:after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            height: 1px;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        &__wrap {
+            max-width: 910px;
+        }
+
+        &__nav-list {
+            gap: 30px;
         }
     }
 }
@@ -64,12 +73,12 @@
             saturate(1366%) hue-rotate(201deg) brightness(97%) contrast(97%);
     }
 
-    .header__wrap {
-        a {
-          @include p-normal;
-            color: $black;
-        }
-        a:after {
+    .header__nav-link,
+    .header__phone {
+        @include p-normal;
+        color: $black;
+
+        &:after {
             background-color: $black;
         }
     }
