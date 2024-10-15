@@ -12,7 +12,7 @@
     font-size: 34px;
     color: $black;
     line-height: 38.08px;
-    letter-spacing: 1.92px;
+    letter-spacing: 0.68px;
     text-align: center;
 }
 
@@ -28,7 +28,7 @@
     font-size: 34px;
     color: $black;
     line-height: 38.08px;
-    letter-spacing: 1.92px;
+    letter-spacing: 0.68px;
     text-align: center;
 }
 
@@ -45,7 +45,7 @@
     font-size: 23px;
     color: $black;
     line-height: 27.6px;
-    letter-spacing: 4px;
+    letter-spacing: 0.92px;
     text-align: center;
 }
 
@@ -60,7 +60,7 @@
     font-weight: 400;
     font-size: 16px;
     color: $white;
-    line-height: 22.72px;
+    line-height: 23px;
 }
 
 @mixin p-small($color) {
@@ -74,7 +74,7 @@
 @mixin p-small-m {
     font-weight: 400;
     font-size: 16px;
-    line-height: 22.72px;
+    line-height: 23px;
     letter-spacing: -0.17px;
 }
 
@@ -88,7 +88,7 @@
 @mixin p-big-m {
     font-weight: 700;
     font-size: 16px;
-    line-height: 22.72px;
+    line-height: 23px;
 }
 
 @mixin big-button($color, $bg-color, $hover, $active) {

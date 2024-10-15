@@ -1,6 +1,7 @@
 .category {
     max-width: fit-content;
     margin: 0 auto;
+    padding: 0 20px 0 20px;
 
     &__title {
         @include h2;
@@ -118,9 +119,7 @@
         height: 100%;
         object-fit: cover;
         transition: transform 0.3s ease;
-
     }
-
 
     @media screen and (max-width: 1024px) {
         &__content {
@@ -139,51 +138,65 @@
     }
 
     @media screen and (max-width: 360px) {
-        padding-top: 75px;
         pointer-events: none;
-        &__header {
-            h2 {
-                @include h2-m;
-            }
-            a {
-                @include p-big-m;
-            }
-            ul {
-                max-width: 277px;
-                gap: 10px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+        width: 360px;
+
+        &__title {
+            @include h2-m;
+            margin-bottom: 30px;
+        }
+
+        &__link-item {
+            @include p-big-m;
+        }
+
+        &__list {
+            width: 277px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
         }
 
         &__content {
-            margin-top: 50px;
-            grid-template-rows: repeat(6, 318px);
-            grid-template-columns: repeat(1, 318px);
-
-            h3 {
-                @include h3-m;
-                text-align: start;
-                color: $white;
-            }
-            p {
-                @include p-small-m;
-            }
+            width: 318px;
+            height: 1998px;
+            margin-top: 49px;
+            gap: 18px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, 1fr);
         }
 
         &__item {
+            height: 318px;
+            width: 318px;
+        }
+
+        &__item-title {
+            @include h3-m;
+            text-align: start;
+            color: $white;
+        }
+        &__item-price {
+            @include p-small-m;
+            margin-top: 14px;
+        }
+        &__item {
             border-radius: 20px;
         }
+
         &__info,
         &__footer {
             padding: 25px;
+            padding-top: 26px;
             margin-bottom: 0px;
         }
-        &__button {
-            button {
-                @include p-big-m;
-                padding: 0;
-            }
+        &__button-more {
+            @include p-big-m;
+            letter-spacing: -0.4px;
+            padding: 0;
         }
     }
+
+
 }

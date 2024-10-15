@@ -1,6 +1,7 @@
 .contact {
     max-width: fit-content;
     margin: 0 auto;
+    padding: 0 20px 0 20px;
 
     &__wrap {
         display: flex;
@@ -17,7 +18,7 @@
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 22px;
+        gap: 20px;
         width: 371px;
     }
     &__title {
@@ -46,25 +47,31 @@
 
     @media screen and (max-width: 360px) {
         pointer-events: none;
-        margin-top: 75px;
+        width: 318px;
+        margin: auto;
+
         &__wrap {
             flex-direction: column;
         }
-        &__img {
+
+        &__image {
+            border-radius: 20px;
             height: 133px;
             width: 130px;
         }
 
-        &__info {
-            h3 {
-                @include h3-m;
-            }
+        &__title {
+            @include h3-m;
+            width: 318px;
+            margin: auto;
+        }
 
-            p {
-                @include p-normal-m;
-                color: $gray-300;
-                text-align: center;
-            }
+        &__text {
+            @include p-normal-m;
+            color: $gray-300;
+            text-align: center;
+            width: 300px;
+            margin: auto;
         }
     }
 }

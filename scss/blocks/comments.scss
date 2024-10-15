@@ -1,6 +1,7 @@
 .comments {
     margin: 0 auto;
     max-width: 1170px;
+    padding: 0 20px 0 20px;
 
     &__title {
         margin: 0 auto;
@@ -21,7 +22,7 @@
     }
 
     &__wrap {
-        margin-top: 99px;
+        margin-top: 100px;
         display: flex;
         gap: 30px;
     }
@@ -73,24 +74,23 @@
         &__item {
             max-width: fit-content;
             height: 761px;
-
         }
     }
 
     @media screen and (max-width: 360px) {
         max-width: 318px;
-        margin-top: 75px;
 
-        &__title {
-            h2 {
-                @include h2-m;
-            }
-            p {
-                @include p-normal-m;
-                color: $gray-300;
-                margin-top: 20px;
-            }
+        &__heading {
+            @include h2-m;
+            max-width: 318px;
         }
+        &__description {
+            @include p-normal-m;
+            color: $gray-300;
+            margin-top: 19px;
+            max-width: 318px;
+        }
+
         &__wrap {
             margin-top: 50px;
             max-width: 318px;
@@ -110,15 +110,13 @@
             align-items: end;
         }
 
-        &__profile-info {
-            h3 {
-                @include h3-m;
-                text-align: start;
-            }
-            p {
-                margin-top: 8px;
-                @include p-small-m;
-            }
+        &__profile-name {
+            @include h3-m;
+            text-align: start;
+        }
+        &__profile-tour {
+            margin-top: 8px;
+            @include p-small-m;
         }
     }
 }

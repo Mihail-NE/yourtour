@@ -7,87 +7,86 @@
     justify-content: center;
     background-color: $beige-200;
 
+
     &__wrap {
+        margin: 0 20px 0 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 1168px;
     }
 
-    &__social {
-        p {
-            @include p-normal;
-            color: $gray-300;
-        }
+    &__social-text {
+        @include p-normal;
+        color: $gray-300;
     }
 
     &__links {
-
         display: flex;
-        gap: 25px;
+        gap: 30px;
     }
 
     &__link {
-
         display: flex;
         align-items: center;
-        gap: 10px;
+        gap: 11px;
+        height: 28px;
         cursor: pointer;
 
-        &:active a {
+        &:active &__link-text {
             color: $orange-200;
         }
+    }
 
-        a {
-            @include p-normal;
-            position: relative;
-            color: $black;
-            text-decoration: none;
 
-            &:after {
-                content: "";
-                position: absolute;
-                right: 0;
-                bottom: 0px;
-                width: 0;
-                height: 1px;
-                background-color: $black;
-                transition: width 0.5s;
-            }
+    &__link-text {
+        @include p-normal;
+        position: relative;
+        color: $black;
+        text-decoration: none;
 
-            &:hover:after {
-                content: "";
-                width: 100%;
-                position: absolute;
-                left: 0;
-                bottom: 0px;
-                height: 1px;
-            }
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0px;
+            width: 0;
+            height: 1px;
+            background-color: $black;
+            transition: width 0.5s;
+        }
+
+        &:hover:after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            height: 1px;
         }
     }
 
     @media screen and (max-width: 1024px) {
         &__wrap {
             max-width: 918px;
-          }
+        }
     }
 
     @media screen and (max-width: 360px) {
+        margin: 0;
         margin-top: 75px;
-        height: 95px;
+        height: 97px;
         pointer-events: none;
 
         &__wrap {
-            max-width: 317px;
+            max-width: 325px;
             flex-direction: column;
-            gap: 7px;
-          }
+            gap: 5px;
+        }
 
-          &__social {
-            p {
-                @include p-normal-m;
-                color: $gray-300;
-            }
+        &__social-text {
+            @include p-normal-m;
+            color: $gray-300;
         }
 
         &__links {
@@ -96,11 +95,12 @@
 
         &__link {
             gap: 5px;
+        }
 
-            a {
-                @include p-normal-m;
-                color: $black;
-            }
+        &__link-text {
+            @include p-normal-m;
+            color: $black;
+            text-decoration: none;
         }
     }
 }

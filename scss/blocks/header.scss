@@ -8,6 +8,7 @@
     z-index: 3;
 
     &__wrap {
+        padding: 0 20px 0 20px;
         height: 32px;
         width: 1168px;
         display: flex;
@@ -20,7 +21,7 @@
     }
 
     &__nav-link,
-    .header__phone {
+    &__phone {
         position: relative;
         text-decoration: none;
         cursor: pointer;
@@ -48,13 +49,31 @@
     }
 
     @media screen and (max-width: 1024px) {
-
         &__wrap {
             max-width: 910px;
         }
 
         &__nav-list {
             gap: 30px;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        &__wrap {
+            max-width: 320px;
+        }
+
+        &__phone {
+            @include p-normal-m;
+        }
+
+        &__logo {
+            width: 133px;
+            height: 25px;
+        }
+
+        &__nav-list {
+            display: none;
         }
     }
 }
@@ -80,6 +99,13 @@
 
         &:after {
             background-color: $black;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .header__phone {
+            @include p-normal-m;
+            color: $black;
         }
     }
 }

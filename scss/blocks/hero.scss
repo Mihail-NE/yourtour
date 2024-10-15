@@ -7,6 +7,7 @@
     background-position: center;
 
     &__content {
+        padding: 0 20px 0 20px;
         padding-top: 207px;
         display: flex;
         flex-direction: column;
@@ -33,7 +34,11 @@
     &__button {
         @include p-small($black);
         border-radius: 10px;
-        padding: 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 34px;
         border: none;
         background-color: $white;
         transition: all 0.3s ease;
@@ -59,34 +64,29 @@
     @media screen and (max-width: 360px) {
         pointer-events: none;
         height: 488px;
-        .header {
-            &__wrap {
-                max-width: 320px;
-                svg {
-                    width: 133px;
-                    height: 22px;
-                }
-                p {
-                    @include p-normal-m;
-                }
-                ul {
-                    display: none;
-                }
-            }
-        }
-        .content {
-            padding-top: 52px;
+
+        &__content {
+            padding: 0;
+            width: 100%;
+            padding-top: 141px;
             gap: 40px;
-            &__info {
-                max-width: 310px;
-            }
-            h1 {
-                @include h1-m;
-                color: $white;
-            }
-            p {
-                @include p-normal-m;
-            }
+        }
+
+        &__title {
+            @include h1-m;
+            color: $white;
+            width: 310px;
+            height: 114px;
+        }
+
+        &__subtitle {
+            @include p-normal-m;
+            width: 310px;
+        }
+
+        &__button {
+            @include p-small-m;
+            margin-top: 12px;
         }
     }
 }

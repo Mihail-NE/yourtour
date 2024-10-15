@@ -1,6 +1,7 @@
 .story {
     max-width: fit-content;
     margin: 0 auto;
+    padding:  0 20px 0 20px;
 
     &__title {
         margin: 0 auto;
@@ -112,7 +113,8 @@
         align-items: center;
         padding: 7px 20px;
         border-radius: 50px;
-        gap: 15px;
+        letter-spacing: -0.5px;
+        gap: 14px;
         transition: all 0.3s ease;
         cursor: pointer;
     }
@@ -142,10 +144,10 @@
         &__item-text {
             margin-top: 37px;
         }
+
     }
 
     @media screen and (max-width: 360px) {
-        margin-top: 75px;
         max-width: 318px;
         pointer-events: none;
 
@@ -154,41 +156,48 @@
             gap: 20px;
         }
 
-        &__title {
-            h2 {
-                @include h2-m;
-            }
-
-            p {
-                @include p-normal-m;
-                margin-top: 20px;
-                color: $gray-300;
-            }
+        &__heading {
+            @include h2-m;
+            max-width: 318px;
         }
+
+        &__description {
+            @include p-normal-m;
+            margin-top: 18px;
+            color: $gray-300;
+            max-width: 318px;
+        }
+
         &__item {
             max-width: 318px;
             height: 455px;
             border-radius: 20px;
         }
 
+        &__item-list {
+            margin-top: 23px;
+            margin-left: 4px;
+        }
+
         &__info {
             padding: 30px;
+            padding-top: 31px;
             max-width: 263px;
+        }
 
-            h3 {
-                @include h3-m;
-                max-width: 200px;
-                color: $white;
-                text-align: start;
-            }
-            p {
-                @include p-normal-m;
-                margin-top: 20px;
-            }
+        &__item-title {
+            @include h3-m;
+            max-width: 150px;
+            color: $white;
+            text-align: start;
+        }
+        &__item-text {
+            @include p-normal-m;
+            margin-top: 20px;
+        }
 
-            li {
-                @include p-normal-m;
-            }
+        &__item-list-item {
+            @include p-normal-m;
         }
 
         &__links {
@@ -199,11 +208,9 @@
             padding: 30px;
         }
 
-        &__button {
-            button {
-                @include p-big-m;
-                padding: 0;
-            }
+        &__button-more {
+            @include p-big-m;
+            padding: 0;
         }
     }
 }

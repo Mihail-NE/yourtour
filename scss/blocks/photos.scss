@@ -1,6 +1,7 @@
 .photos {
     max-width: fit-content;
     margin: 0 auto;
+    padding: 0 20px 0 20px;
 
     &__title {
         margin: 0 auto;
@@ -43,7 +44,7 @@
     }
 
     &__group1-item,
-    .photos__group3-item {
+    &__group3-item {
         width: 442.5px;
     }
 
@@ -52,6 +53,9 @@
     }
 
     @media screen and (max-width: 1024px) {
+        &__wrap {
+            gap: 29.5px;
+        }
         &__group {
             gap: 20px;
             width: 984px;
@@ -79,18 +83,18 @@
     }
 
     @media screen and (max-width: 360px) {
-        margin-top: 75px;
+        max-width: 318px;
 
-        &__title {
-            h2 {
-                @include h2-m;
-            }
+        &__heading {
+            @include h2-m;
+            width: 318px;
+        }
 
-            p {
-                @include p-normal-m;
-                margin-top: 20px;
-                color: $gray-300;
-            }
+        &__description {
+            @include p-normal-m;
+            margin-top: 19px;
+            color: $gray-300;
+            width: 318px;
         }
 
         &__wrap {
@@ -99,43 +103,38 @@
             gap: 18px;
         }
 
-        &__group1 {
-            gap: 18px;
+        &__group {
+            gap: 0px;
+            height: 110px;
+        }
 
-            img {
-                width: 150px;
-                height: 110px;
-                border-radius: 20px;
-                &:nth-child(2),
-                &:nth-child(3) {
-                    display: none;
-                }
+        &__group-photo {
+            border-radius: 20px;
+        }
+
+        &__group1-item {
+            width: 150px;
+            padding-right: 18px;
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: none;
             }
         }
-        &__group2 {
-            gap: 10px;
-
-            img {
-                width: 99.33px;
-                height: 110px;
-                border-radius: 20px;
-                &:nth-child(2),
-                &:nth-child(3) {
-                    display: none;
-                }
+        &__group2-item {
+            width: 99.33px;
+            padding-right: 10px;
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: none;
             }
         }
-        &__group3 {
-            gap: 10px;
 
-            img {
-                width: 154px;
-                height: 110px;
-                border-radius: 20px;
-                &:nth-child(3),
-                &:nth-child(4) {
-                    display: none;
-                }
+        &__group3-item {
+            width: 154px;
+            padding-right: 10px;
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
             }
         }
     }

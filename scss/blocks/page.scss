@@ -1,7 +1,12 @@
+
 .main {
-  display: flex;
-  flex-direction: column;
-  gap: 135px;
-  width: 100%;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 135px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 360px) {
+        gap: 76px;
+    }
 }
