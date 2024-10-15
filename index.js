@@ -1,13 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const link1 = document.getElementById("link1");
-    const link2 = document.getElementById("link2");
-    const link3 = document.getElementById("link3");
-    const link4 = document.getElementById("link4");
-    const header = document.getElementById("header");
-    const form = document.querySelector(".form__wrap");
-    const select = document.getElementById("directionSelect");
-    const resetButton = document.querySelector(".form__button-reset");
+const link1 = document.getElementById("link1");
+const link2 = document.getElementById("link2");
+const link3 = document.getElementById("link3");
+const link4 = document.getElementById("link4");
+const header = document.getElementById("header");
+const select = document.getElementById("directionSelect");
 
+const form = document.querySelector(".form__wrap");
+const resetButton = document.querySelector(".form__button-reset");
+
+document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll("a").forEach(function (link) {
         link.addEventListener("click", function (e) {
@@ -15,21 +16,17 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     form.addEventListener("submit", function (e) {
         e.preventDefault();
-        if (form.checkValidity()) {
-            console.log("Форма отправлена");
-        }
+        form.checkValidity();
     });
-
 
     resetButton.addEventListener("click", function (e) {
         e.preventDefault();
         form.reset();
         indicator.style.transform = "rotate(0deg)";
+        select.classList.add("form__select-placeholder");
     });
-
 
     function scrollToElement(selector) {
         const element = document.querySelector(selector);
@@ -52,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
     addClickListener(link3, ".comments");
     addClickListener(link4, ".story");
 
-
     if (header) {
         document.addEventListener("scroll", () => {
             if (window.scrollY > 450) {
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleIndicator() {
         indicator.style.transform = isOpen ? "rotate(180deg)" : "rotate(0deg)";
-
     }
 
     select.addEventListener("focus", function () {
@@ -91,16 +86,13 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleIndicator();
     });
 
-
-    select.addEventListener('change', () => {
+    select.addEventListener("change", () => {
         const value = select.value;
 
-        if (value === 'none') {
-            select.classList.add('form__select-placeholder');
+        if (value === "default") {
+            select.classList.add("form__select-placeholder");
         } else {
-            select.classList.remove('form__select-placeholder');
+            select.classList.remove("form__select-placeholder");
         }
     });
-
-
 });

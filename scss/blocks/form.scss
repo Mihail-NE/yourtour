@@ -62,7 +62,7 @@
     }
 
     &__input-field,
-    .form__select {
+    &__select {
         @include p-normal;
         font-family: "Roboto";
         font-style: normal;
@@ -80,28 +80,22 @@
         &:focus {
             border: 1px solid $gray-300;
         }
+        option {
+            color: $black;
+        }
     }
+
+
 
     &__select-placeholder {
         color: $gray-300;
     }
-    &__select {
-        @include p-normal;
-        color: $black;
-        appearance: none;
-        padding: 20px;
-        border-radius: 10px;
-        border: 1px solid $beige-200;
-        background-color: $beige-100;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        &:hover {
-            background-color: $beige-200;
-        }
-        &:focus {
-            border: 1px solid $gray-300;
-        }
+
+    &__option-placeholder {
+        color: $gray-300;
     }
+
+
 
     &__textarea {
         margin-top: 33px;
