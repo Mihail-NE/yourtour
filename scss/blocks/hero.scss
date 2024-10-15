@@ -1,7 +1,7 @@
 .hero {
     position: relative;
     height: 831px;
-    background-image: url("/assets/img/header-image.jpg");
+    background-image: url("/yourtour/assets/img/header-image.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -54,7 +54,7 @@
     }
 
     @media screen and (max-width: 1024px) {
-        background-image: url(/assets/img/header-image-small.jpg);
+        background-image: url(/yourtour/assets/img/header-image-small.jpg);
 
         &__subtitle {
             max-width: 400px;
