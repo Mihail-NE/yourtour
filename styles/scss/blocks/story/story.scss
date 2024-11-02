@@ -43,6 +43,7 @@
             rgba(0, 0, 0, 0.2) 100%
         );
         overflow: hidden;
+        z-index: 1;
 
         &:hover .story__card-photo {
             transform: scale(1.2);
