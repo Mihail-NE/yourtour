@@ -1538,7 +1538,7 @@ body {
   height: 26px;
   background: url(/yourtour/assets/icons/arrow\ bt.svg);
 }
-.story__item-photo {
+.story__card-photo {
   position: absolute;
   z-index: -1;
   top: 0;
