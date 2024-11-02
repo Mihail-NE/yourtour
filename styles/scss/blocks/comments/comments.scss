@@ -7,6 +7,7 @@
         margin: 0 auto;
         width: fit-content;
     }
+
     &__heading {
         @include h2;
         width: 529px;
@@ -40,6 +41,9 @@
 
     &__info {
         @include p-big($black);
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
     }
 
     &__profile {
@@ -52,6 +56,7 @@
         color: $black;
         text-align: left;
     }
+
     &__profile-tour {
         @include p-small($gray-300);
         margin-top: 8px;
@@ -63,10 +68,11 @@
         border-radius: 100px;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
         &__wrap {
             gap: 18px;
         }
+
         &__info {
             max-width: 370px;
         }
@@ -77,13 +83,25 @@
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 950px) {
+        &__wrap {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            width: 600px;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
         max-width: 318px;
 
         &__heading {
             @include h2-m;
             max-width: 318px;
         }
+
         &__description {
             @include p-normal-m;
             color: $gray-300;
@@ -101,8 +119,10 @@
             padding: 20px;
             height: fit-content;
         }
+
         &__info {
             @include p-big-m;
+            gap: 23px;
         }
 
         &__profile {
@@ -114,6 +134,7 @@
             @include h3-m;
             text-align: start;
         }
+
         &__profile-tour {
             margin-top: 8px;
             @include p-small-m;

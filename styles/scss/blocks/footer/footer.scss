@@ -7,7 +7,6 @@
     justify-content: center;
     background-color: $beige-200;
 
-
     &__wrap {
         margin: 0 20px 0 20px;
         display: flex;
@@ -27,9 +26,6 @@
     }
 
     &__link {
-        display: flex;
-        align-items: center;
-        gap: 11px;
         height: 28px;
         cursor: pointer;
 
@@ -38,10 +34,32 @@
         }
     }
 
+    &__link-icon {
+        width: 22px;
+        height: 22px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        &--instagram {
+            background-image: url(/yourtour/assets/img/inst.png);
+        }
+
+        &--facebook {
+            background-image: url(/yourtour/assets/img/fb\(1\).png);
+        }
+
+        &--vk {
+            background-image: url(/yourtour/assets/img/vk.png);
+        }
+    }
 
     &__link-text {
         @include p-normal;
         position: relative;
+        display: flex;
+        align-items: center;
+        gap: 11px;
         color: $black;
         text-decoration: none;
 
@@ -58,9 +76,9 @@
 
         &:hover:after {
             content: "";
-            width: 100%;
+            width: 72%;
             position: absolute;
-            left: 0;
+            left: 35px;
             bottom: 0px;
             height: 1px;
         }
@@ -72,7 +90,7 @@
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 750px) {
         margin: 0;
         margin-top: 75px;
         height: 97px;
@@ -83,6 +101,12 @@
             flex-direction: column;
             gap: 5px;
         }
+    }
+
+    @media screen and (max-width: 400px) {
+        &__wrap {
+            gap: 8px;
+        }
 
         &__social-text {
             @include p-normal-m;
@@ -90,17 +114,23 @@
         }
 
         &__links {
-            gap: 15px;
+            gap: 10px;
         }
 
         &__link {
             gap: 5px;
         }
 
+        &__link-icon {
+            width: 22px;
+            height: 22px;
+        }
+
         &__link-text {
             @include p-normal-m;
             color: $black;
             text-decoration: none;
+            gap: 5px;
         }
     }
 }

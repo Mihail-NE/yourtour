@@ -17,16 +17,12 @@
             content="путешествия, туры, походы, сплавы, велопрогулки, авторские туры,
             отзывы путешественников, фотографии путешествий, истории путешествий, YourTour"
         />
-        <link rel="stylesheet" href="./styles/style.css" />
+        <link rel="stylesheet" href="./styles/css/style.css" />
     </head>
     <body class="page">
         <header class="header page__header" id="header">
             <div class="header__wrap">
-                <img
-                    src="./assets/icons/YourTour.svg"
-                    class="header__logo"
-                    alt="logoo"
-                />
+                <div class="header__logo" aria-label="логотип YourTour"></div>
                 <nav class="header__nav">
                     <ul class="header__nav-list">
                         <li class="header__nav-item">
@@ -52,217 +48,210 @@
                     </ul>
                 </nav>
                 <div class="header__phone">
-                    <a>+7 999 999 99 99</a>
+                    <a class="header__phone-link" href="tel:+79999999999"
+                        >+7 999 999 99 99</a
+                    >
                 </div>
             </div>
         </header>
 
         <main class="main">
-            <section class="hero main__hero">
-                <div class="hero__content">
-                    <h1 class="hero__title">
+            <section class="intro main__intro">
+                <div class="intro__content">
+                    <h1 class="intro__title">
                         Идеальные путешествия существуют
                     </h1>
-                    <p class="hero__subtitle">
+                    <p class="intro__subtitle">
                         Идейные соображения высшего порядка, а также рамки и
                         место обучения кадров
                     </p>
-                    <button class="hero__button">Найти тур</button>
+                    <button id="search-tour" class="intro__button">
+                        Найти тур
+                    </button>
                 </div>
             </section>
 
-            <section class="category main__category">
-                <div class="category__header">
-                    <h2 class="category__title">Выбери свой тур</h2>
-                    <ul class="category__list">
-                        <li class="category__link category__link-active">
-                            <a href="#" class="category__link-item"
-                                >Популярные</a
-                            >
+            <section class="tours main__tours">
+                <div class="tours__header">
+                    <h2 class="tours__title">Выбери свой тур</h2>
+                    <ul class="tours__list">
+                        <li class="tours__link tours__link-active">
+                            <a href="#" class="tours__link-item">Популярные</a>
                         </li>
-                        <li class="category__link">
-                            <a href="#" class="category__link-item"
-                                >Авторские</a
-                            >
+                        <li class="tours__link">
+                            <a href="#" class="tours__link-item">Авторские</a>
                         </li>
-                        <li class="category__link">
-                            <a href="#" class="category__link-item">Походы</a>
+                        <li class="tours__link">
+                            <a href="#" class="tours__link-item">Походы</a>
                         </li>
-                        <li class="category__link">
-                            <a href="#" class="category__link-item">Сплавы</a>
+                        <li class="tours__link">
+                            <a href="#" class="tours__link-item">Сплавы</a>
                         </li>
-                        <li class="category__link">
-                            <a href="#" class="category__link-item"
+                        <li class="tours__link">
+                            <a href="#" class="tours__link-item"
                                 >Велопрогулки</a
                             >
                         </li>
                     </ul>
                 </div>
-                <div class="category__content">
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                <ul class="tours__content">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-1.jpg"
-                            alt="Горный пейзаж"
+                            alt="Белый фургон на фоне гор"
                         />
-                    </article>
+                    </li>
 
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-2.jpg"
-                            alt="Горный пейзаж"
+                            alt="Девушка в пустыне сидящая на дюне"
                         />
-                    </article>
+                    </li>
 
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-3.jpg"
-                            alt="Горный пейзаж"
+                            alt="Люди на вершине горы на фоне моря"
                         />
-                    </article>
+                    </li>
 
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-4.jpg"
-                            alt="Горный пейзаж"
+                            alt="Узкая городская улица с красивой архитектурой"
                         />
-                    </article>
+                    </li>
 
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-5.jpg"
-                            alt="Горный пейзаж"
+                            alt="Разноцветные домики на морском побережье"
                         />
-                    </article>
+                    </li>
 
-                    <article class="category__item">
-                        <div class="category__info">
-                            <h3 class="category__item-title">
+                    <li class="tours__card">
+                        <div class="tours__card-info">
+                            <h3 class="tours__card-title">
                                 Путешествие в горы
                             </h3>
-                            <p class="category__item-price">от 80 000 руб</p>
+                            <p class="tours__card-price">от 80 000 руб</p>
                         </div>
-                        <div class="category__footer">
-                            <div class="category__button">
-                                <button class="category__button-more">
+                        <div class="tours__footer">
+                            <div class="tours__button">
+                                <button class="tours__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="category__button-icon"
-                                    />
+                                    <div
+                                        class="tours__button-icon"
+                                        aria-hidden="true"
+                                    ></div>
                                 </button>
                             </div>
                         </div>
                         <img
-                            class="category__item-image"
+                            class="tours__card-image"
                             src="./assets/img/card-tour-photo-6.jpg"
-                            alt="Горный пейзаж"
+                            alt="Человек сидящий на мостике на фоне горного озера"
                         />
-                    </article>
-                </div>
+                    </li>
+                </ul>
             </section>
 
             <section class="form main__form">
                 <div class="form__header">
                     <h2 class="form__title">Собери свой тур</h2>
                     <p class="form__description">
-                        Идейные соображения высшего порядка,
-                         а также рамки и
+                        Идейные соображения высшего порядка, а также рамки и
                         место обучения кадров
                     </p>
                 </div>
@@ -275,6 +264,8 @@
                                 required
                                 type="text"
                                 placeholder="Введите Ваше имя"
+                                pattern="[а-яА-Яa-zA-Z\s]{2,}"
+                                title="Введите имя на русском или английском языке. Минимум 2 символа."
                                 class="form__input-field"
                             />
                         </div>
@@ -284,26 +275,33 @@
                             >
                             <select
                                 id="directionSelect"
+                                required
                                 class="form__select form__select-placeholder"
                             >
-                                <option class="form__option-placeholder" value="default" hidden>
+                                <option
+                                    class="form__option-placeholder"
+                                    value="default"
+                                    hidden
+                                >
                                     Куда хотите ехать
                                 </option>
                                 <option value="hike">Поход</option>
                                 <option value="bike">Велопрогулка</option>
                                 <option value="rafting">Сплав</option>
                             </select>
-                            <img
-                                src="./assets/icons/ic-dropdown.svg"
-                                alt="Выпадающий список"
+                            <div
                                 class="form__select-icon"
-                            />
+                                aria-hidden="true"
+                            ></div>
                         </div>
                         <div class="form__input">
                             <label class="form__label">Email</label>
                             <input
                                 type="email"
+                                required
                                 placeholder="example@mail.com"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                                title="Введите корректный email"
                                 class="form__input-field"
                             />
                         </div>
@@ -312,7 +310,10 @@
                             <label class="form__label">Телефон</label>
                             <input
                                 type="tel"
+                                required
                                 placeholder="+ 7 ( _ _ _ ) _ _ _ - _ _ - _ _ "
+                                pattern="\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}"
+                                title="Введите телефон в формате +7 (XXX) XXX-XX-XX"
                                 class="form__input-field"
                             />
                         </div>
@@ -321,6 +322,9 @@
                             <label class="form__label">Дата от</label>
                             <input
                                 type="text"
+                                required
+                                pattern="\d{1,2}\.\d{1,2}\.\d{4}"
+                                title="Введите дату в формате ДД.ММ.ГГГГ"
                                 placeholder="ДД.ММ.ГГГГ"
                                 class="form__input-field"
                             />
@@ -330,6 +334,9 @@
                             <label class="form__label">Дата до</label>
                             <input
                                 type="text"
+                                required
+                                pattern="\d{1,2}\.\d{1,2}\.\d{4}"
+                                title="Введите дату в формате ДД.ММ.ГГГГ"
                                 placeholder="ДД.ММ.ГГГГ"
                                 class="form__input-field"
                             />
@@ -342,6 +349,8 @@
                         <textarea
                             id="comment"
                             required
+                            minlength="10"
+                            title="Введите комментарий минимум 10 символов"
                             class="form__textarea-field"
                         ></textarea>
                     </fieldset>
@@ -354,6 +363,7 @@
                                     type="radio"
                                     name="age"
                                     value="yes"
+                                    required
                                 />
                                 Да
                             </label>
@@ -372,6 +382,7 @@
                                 type="checkbox"
                                 id="license"
                                 class="form__checkbox-input"
+                                required
                             />
                             <label for="license" class="form__checkbox-label">
                                 Нажимая кнопку, я принимаю условия
@@ -437,8 +448,8 @@
                                 сфера нашей активности играет важную роль в
                                 формировании системы обучения кадров,
                                 соответствует насущным потребностям.
-                                <br />
-                                <br />
+                            </p>
+                            <p class="comments__text">
                                 Значимость этих проблем настолько очевидна, что
                                 дальнейшее развитие различных форм деятельности
                                 обеспечивает широкому кругу (специалистов)
@@ -465,113 +476,89 @@
                 </div>
             </section>
 
-            <section class="photos main__photos">
-                <div class="photos__title">
-                    <h2 class="photos__heading">Фотографии путешествий</h2>
-                    <p class="photos__description">
+            <section class="gallery main__gallery">
+                <div class="gallery__title">
+                    <h2 class="gallery__heading">Фотографии путешествий</h2>
+                    <p class="gallery__description">
                         Идейные соображения высшего порядка, а также рамки и
                         место обучения кадров
                     </p>
                 </div>
-                <div class="photos__wrap">
-                    <div class="photos__group">
-                        <span class="photos__group1-item">
+                <div class="gallery__wrap">
+                    <div class="gallery__wrap">
+                        <div class="gallery__group">
                             <img
                                 src="assets/img/travel-photo-1.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group1-photo"
+                                alt="Самолёт летящий в небе"
                             />
-                        </span>
-                        <span class="photos__group1-item">
                             <img
                                 src="assets/img/travel-photo-2.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group1-photo"
+                                alt="Вид из палатки в пустыне"
                             />
-                        </span>
-                        <span class="photos__group1-item">
                             <img
                                 src="assets/img/travel-photo-3.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group1-photo"
+                                alt="Путишественник в горах на фоне заката"
                             />
-                        </span>
-                        <span class="photos__group1-item">
                             <img
                                 src="assets/img/travel-photo-4.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group1-photo"
+                                alt="Дорога уходящая вдаль"
                             />
-                        </span>
+                        </div>
 
-                    </div>
-
-                    <div class="photos__group">
-                        <span class="photos__group2-item">
+                        <div class="gallery__group">
                             <img
                                 src="assets/img/travel-photo-5.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group2-photo"
+                                alt="Пара на обрывистом морском берегу"
                             />
-                        </span>
-                        <span class="photos__group2-item">
                             <img
                                 src="assets/img/travel-photo-6.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group2-photo"
+                                alt="Карта путишествий"
                             />
-                        </span>
-                        <span class="photos__group2-item">
                             <img
                                 src="assets/img/travel-photo-7.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group2-photo"
+                                alt="Изогнутый мост в лесу"
                             />
-                        </span>
-                        <span class="photos__group2-item">
                             <img
                                 src="assets/img/travel-photo-8.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group2-photo"
+                                alt="Счастливая пара в доме на колёсах на берегу озера"
                             />
-                        </span>
-                        <span class="photos__group2-item">
                             <img
                                 src="assets/img/travel-photo-9.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group2-photo"
+                                alt="Узкая городская улица с красивой архитектурой"
                             />
-                        </span>
-                    </div>
-                    <div class="photos__group">
-                        <span class="photos__group3-item">
+                        </div>
+
+                        <div class="gallery__group">
                             <img
                                 src="assets/img/travel-photo-10.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group3-photo"
+                                alt="Уютная, зелёная городская улица"
                             />
-                        </span>
-                        <span class="photos__group3-item">
                             <img
                                 src="assets/img/travel-photo-11.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group3-photo"
+                                alt="Человек сидящий на мостике на фоне горного озера"
                             />
-                        </span>
-                        <span class="photos__group3-item">
                             <img
                                 src="assets/img/travel-photo-12.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group3-photo"
+                                alt="Оживлённая городская улица"
                             />
-                        </span>
-                        <span class="photos__group3-item">
                             <img
                                 src="assets/img/travel-photo-13.jpg"
-                                class="photos__group-photo"
-                                alt="фотография"
+                                class="gallery__group-photo gallery__group3-photo"
+                                alt="Девушка плывущая на доске по воде"
                             />
-                        </span>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -584,27 +571,26 @@
                         место обучения кадров
                     </p>
                 </div>
-                <div class="story__wrap">
-                    <article class="story__item">
-                        <div class="story__info">
-                            <h3 class="story__item-title">
+                <ul class="story__wrap">
+                    <li class="story__card">
+                        <div class="story__card-info">
+                            <h3 class="story__card-title">
                                 Автостопом в Стамбул
                             </h3>
-                            <p class="story__item-text">
+                            <p class="story__card-text">
                                 Идейные соображения высшего порядка, а также
                                 рамки и место обучения кадров обеспечивает
                                 широкому кругу (специалистов) участие в
                                 формировании новых предложений:
-
                             </p>
-                            <ul class="story__item-list">
-                                <li class="story__item-list-item">
+                            <ul class="story__card-list">
+                                <li class="story__card-list-item">
                                     вкусная еда
                                 </li>
-                                <li class="story__item-list-item">
+                                <li class="story__card-list-item">
                                     дешевый транспорт
                                 </li>
-                                <li class="story__item-list-item">
+                                <li class="story__card-list-item">
                                     красивый город
                                 </li>
                             </ul>
@@ -613,27 +599,32 @@
                             <div class="story__button">
                                 <button class="story__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="story__button-icon"
-                                    />
+                                    <div class="story__button-icon"></div>
                                 </button>
                             </div>
                             <div class="story__links">
                                 <ul class="story__links-list">
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.instagram.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >instagram</a
                                         >
                                     </li>
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.facebook.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >facebook</a
                                         >
                                     </li>
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.youtube.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >YouTube</a
                                         >
                                     </li>
@@ -643,94 +634,99 @@
                         <img
                             class="story__item-photo"
                             src="./assets/img/story-photo-1.jpg"
-                            alt="Фото истории путешествия"
+                            alt="Девушка сидящая рядом с палаткой на берегу моря"
                         />
-                    </article>
+                    </li>
 
-                    <article class="story__item">
-                        <div class="story__info">
-                            <h3 class="story__item-title">
+                    <li class="story__card">
+                        <div class="story__card-info">
+                            <h3 class="story__card-title">
                                 Автостопом в Стамбул
                             </h3>
-                            <p class="story__item-text">
+                            <p class="story__card-text">
                                 Идейные соображения высшего порядка, а также
                                 рамки и место обучения кадров обеспечивает
                                 широкому кругу (специалистов) участие в
-                                формировании новых предложений.
+                                формировании новых предложений:
                             </p>
-
                         </div>
                         <div class="story__footer">
                             <div class="story__button">
                                 <button class="story__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="story__button-icon"
-                                    />
+                                    <div class="story__button-icon"></div>
                                 </button>
                             </div>
                             <div class="story__links">
                                 <ul class="story__links-list">
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.instagram.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >instagram</a
                                         >
                                     </li>
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.vk.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >ВКонтакте</a
                                         >
                                     </li>
-
                                 </ul>
                             </div>
                         </div>
                         <img
                             class="story__item-photo"
                             src="./assets/img/story-photo-2.jpg"
-                            alt="Фото истории путешествия"
+                            alt="Компания друзей сидящая у костра"
                         />
-                    </article>
+                    </li>
 
-                    <article class="story__item">
-                        <div class="story__info">
-                            <h3 class="story__item-title">
+                    <li class="story__card">
+                        <div class="story__card-info">
+                            <h3 class="story__card-title">
                                 Автостопом в Стамбул
                             </h3>
-                            <p class="story__item-text">
+                            <p class="story__card-text">
                                 Идейные соображения высшего порядка, а также
                                 рамки и место обучения кадров обеспечивает
                                 широкому кругу (специалистов) участие в
-                                формировании новых предложений.
+                                формировании новых предложений:
                             </p>
                         </div>
                         <div class="story__footer">
                             <div class="story__button">
                                 <button class="story__button-more">
                                     Подробнее
-                                    <img
-                                        src="./assets/icons/arrow bt.svg"
-                                        alt="Стрелка"
-                                        class="story__button-icon"
-                                    />
+                                    <div class="story__button-icon"></div>
                                 </button>
                             </div>
                             <div class="story__links">
                                 <ul class="story__links-list">
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.instagram.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >instagram</a
                                         >
                                     </li>
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.facebook.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >facebook</a
                                         >
                                     </li>
                                     <li class="story__links-item">
-                                        <a href="#" class="story__link"
+                                        <a
+                                            href="https://www.vk.com"
+                                            target="_blank"
+                                            class="story__link"
                                             >ВКонтакте</a
                                         >
                                     </li>
@@ -740,10 +736,10 @@
                         <img
                             class="story__item-photo"
                             src="./assets/img/story-photo-3.jpg"
-                            alt="Фото истории путешествия"
+                            alt="Вечерний закат на морском побережье"
                         />
-                    </article>
-                </div>
+                    </li>
+                </ul>
             </section>
 
             <section class="contact main__contact">
@@ -751,7 +747,7 @@
                     <div class="contact__img">
                         <img
                             src="./assets/img/small.jpg"
-                            alt="Контактное изображение"
+                            alt="Одинокие избушки стощие в поле рядом с лесным озером на фоне гор"
                             class="contact__image"
                         />
                     </div>
@@ -761,7 +757,9 @@
                         </h3>
                         <p class="contact__text">
                             Напиши на почту и узнай подробности на
-                            <a href="#" class="contact__email"
+                            <a
+                                href="mailto:yourtour@gmail.com"
+                                class="contact__email"
                                 >yourtour@gmail.com</a
                             >
                         </p>
@@ -777,33 +775,45 @@
                 </div>
                 <div class="footer__links">
                     <div class="footer__link">
-                        <img
-                            src="./assets/img/inst.png"
-                            alt="Instagram"
-                            class="footer__link-icon"
-                        />
-                        <a href="#" class="footer__link-text">instagram</a>
+                        <a
+                            href="https://www.instagram.com"
+                            target="_blank"
+                            class="footer__link-text"
+                        >
+                            <div
+                                class="footer__link-icon footer__link-icon--instagram"
+                            ></div>
+                            instagram
+                        </a>
                     </div>
                     <div class="footer__link">
-                        <img
-                            src="./assets/img/fb(1).png"
-                            alt="Facebook"
-                            class="footer__link-icon"
-                        />
-                        <a href="#" class="footer__link-text">facebook</a>
+                        <a
+                            href="https://www.facebook.com"
+                            target="_blank"
+                            class="footer__link-text"
+                        >
+                            <div
+                                class="footer__link-icon footer__link-icon--facebook"
+                            ></div>
+                            facebook
+                        </a>
                     </div>
                     <div class="footer__link">
-                        <img
-                            src="./assets/img/vk.png"
-                            alt="VKontakte"
-                            class="footer__link-icon"
-                        />
-                        <a href="#" class="footer__link-text">vkontakte</a>
+                        <a
+                            href="https://www.vk.com"
+                            target="_blank"
+                            class="footer__link-text"
+                        >
+                            <div
+                                class="footer__link-icon footer__link-icon--vk"
+                            ></div>
+                            vkontakte
+                        </a>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <script src="./index.js"></script>
+        <script src="./scripts/index.js"></script>
     </body>
 </html>

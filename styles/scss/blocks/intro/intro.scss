@@ -1,7 +1,7 @@
-.hero {
+.intro {
     position: relative;
     height: 831px;
-    background-image: url("/yourtour/assets/img/header-image.jpg");
+    background-image: url(/yourtour/assets/img/header-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -48,6 +48,7 @@
             background-color: $orange-200;
             color: white;
         }
+
         &:active {
             background-color: $orange-100;
         }
@@ -61,9 +62,33 @@
         }
     }
 
+    @media screen and (max-width: 650px) {
+        height: 488px;
+
+        &__content {
+            padding: 120px;
+        }
+
+        &__title {
+            @include h1-m;
+            color: $white;
+            width: 310px;
+            height: 114px;
+        }
+
+        &__subtitle {
+            @include p-normal-m;
+            width: 310px;
+        }
+
+        &__button {
+            @include p-small-m;
+            margin-top: 12px;
+        }
+    }
+
     @media screen and (max-width: 360px) {
         pointer-events: none;
-        height: 488px;
 
         &__content {
             padding: 0;

@@ -1,50 +1,47 @@
 .form {
-    max-width: 1170px;
+    width: min(100%, 1170px);
     margin: 0 auto;
-    padding: 0 20px 0 20px;
 
     &__header {
-        width: 458px;
+        width: min(100%, 458px);
         margin: auto;
     }
 
     &__title {
         @include h2;
         margin-bottom: 30px;
+        text-align: center;
     }
 
     &__description {
         @include p-normal;
         color: $gray-300;
         text-align: center;
-        width: 400px;
+        width: min(100%, 400px);
         margin: auto;
     }
 
     &__wrap {
-        margin: 0 auto;
-        margin-top: 99px;
+        margin: 99px auto 0;
         background-color: $white;
         border-radius: 50px;
-        width: 1170px;
-        height: 986px;
-    }
-
-    &__label {
-        @include p-normal;
-        color: $black;
+        width: min(100%, 1170px);
+        min-height: 986px;
     }
 
     &__inputs {
-        padding: 71px 70px 0 70px;
+        padding: 71px 70px 0;
         display: flex;
         flex-wrap: wrap;
         gap: 33px 30px;
+        justify-content: space-between;
     }
 
     &__input {
         position: relative;
-        width: 500px;
+        width: calc((100% - 20px) / 2);
+        min-width: 300px;
+        max-width: 500px;
         display: flex;
         flex-direction: column;
         gap: 8px;
@@ -54,9 +51,9 @@
         position: absolute;
         top: 57px;
         right: 21px;
-        width: 26px;
-        height: 26px;
-        background-image: url(/yourtour/assets/icons/ic-dropdown.svg);
+        height: 24px;
+        width: 24px;
+        background: url(/yourtour/assets/icons/ic-dropdown.svg);
         cursor: pointer;
         pointer-events: none;
     }
@@ -74,18 +71,19 @@
         background-color: $beige-100;
         transition: all 0.3s ease;
         cursor: pointer;
+
         &:hover {
             background-color: $beige-200;
         }
+
         &:focus {
             border: 1px solid $gray-300;
         }
+
         option {
             color: $black;
         }
     }
-
-
 
     &__select-placeholder {
         color: $gray-300;
@@ -95,22 +93,22 @@
         color: $gray-300;
     }
 
-
-
     &__textarea {
         margin-top: 33px;
         display: flex;
         flex-direction: column;
-        width: 1030px;
-        height: 188px;
+        width: min(calc(100% - 140px), 1030px);
+        min-height: 188px;
         gap: 8px;
         padding: 0 70px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     &__textarea-field {
         @include p-normal;
         font-family: Roboto;
-        height: 152px;
+        height: 110px;
         color: $black;
         padding: 20px;
         border-radius: 10px;
@@ -224,6 +222,7 @@
         @include p-small($black);
         cursor: pointer;
         text-decoration: none;
+
         &:hover {
             text-decoration: underline;
         }
@@ -242,31 +241,81 @@
     &__button-reset {
         @include big-button($green-400, $green-100, $gray-100, $gray-200);
     }
-
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1200px) {
         &__wrap {
             width: 798px;
             height: 845px;
             padding: 61px;
+            min-height: 845px;
         }
+
         &__inputs {
             gap: 20px;
             row-gap: 33px;
         }
+
         &__input {
             max-width: 389px;
         }
+
+        &__textarea {
+            width: 100%;
+            max-width: 798px;
+        }
+
         &__textarea,
         .form__inputs,
         .form__radio {
             padding: 0;
         }
+
         &__checkbox {
             gap: 11px;
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 900px) {
+        &__wrap {
+            width: 500px;
+            height: auto;
+            padding: 40px;
+        }
+
+        &__input {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &__wrap {
+            width: 400px;
+        }
+
+        &__checkbox {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        &__checkbox-input {
+            width: 35px;
+            height: 26px;
+        }
+
+        &__buttons {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        &__button-search,
+        &__button-reset {
+            padding: 15px 25px;
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 470px) {
         &__header {
             width: 318px;
             height: 104px;
@@ -281,7 +330,6 @@
             @include p-normal-m;
             color: $gray-300;
             width: 318px;
-
         }
 
         &__wrap {
@@ -292,17 +340,17 @@
             width: 278px;
             height: 1070px;
         }
+
         &__inputs {
             gap: 30px;
             height: 599px;
+            padding: 0;
         }
 
         &__input {
             width: 278px;
             height: 74px;
         }
-
-
 
         &__select-icon {
             top: 41px;
@@ -337,7 +385,7 @@
         }
 
         &__radio {
-            margin-top: 30px;
+            margin-top: 6px;
         }
 
         &__radio-item {
@@ -348,7 +396,7 @@
 
         &__radio-container {
             gap: 30px;
-         }
+        }
 
         &__radio-btn {
             height: 20px;

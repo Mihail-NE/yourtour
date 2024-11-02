@@ -1,7 +1,6 @@
-.category {
-    max-width: fit-content;
+.tours {
+    width: min(100%, 1170px);
     margin: 0 auto;
-    padding: 0 20px 0 20px;
 
     &__title {
         @include h2;
@@ -12,79 +11,127 @@
         display: flex;
         justify-content: center;
         gap: 30px;
+        flex-wrap: wrap;
+        max-width: 1170px;
+        margin: 0 auto;
     }
 
     &__link-item {
         @include p-big($black);
         text-decoration: none;
+        position: relative;
 
-        &:hover {
-            padding-bottom: 3px;
-            border-bottom: 2px solid $black;
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background-color: $black;
+            transition: width 0.5s;
+        }
+
+        &:hover:after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: -5px;
+            height: 2px;
         }
     }
 
-    &__link-active .category__link-item {
+    &__link-active .tours__link-item {
         color: $orange-200;
         padding-bottom: 3px;
         border-bottom: 2px solid $orange-200;
+
         &:hover {
             padding-bottom: 3px;
             border-bottom: 2px solid $orange-200;
         }
+
+        &:after {
+            display: none;
+        }
+
+        &:hover:after {
+            display: none;
+        }
+    }
+
+    &__button-icon {
+        width: 24px;
+        height: 24px;
+        background: url(/yourtour/assets/icons/arrow\ bt.svg);
     }
 
     &__content {
-        margin-top: 106px;
-        width: 1170px;
-        height: 1092px;
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        margin: 106px auto 0;
+        width: min(100%, 1170px);
+        min-height: 1092px;
+        display: flex;
+        flex-flow: row wrap;
         gap: 30px;
+        justify-content: center;
     }
 
-    &__item {
+    &__card {
         position: relative;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         height: 531px;
-        width: 370px;
+        width: min(100%, 370px);
+        flex: 0 1 370px;
         border-radius: 50px;
         cursor: pointer;
         overflow: hidden;
-        background: linear-gradient(
-            360deg,
-            rgba(0, 0, 0, 0.4) 0%,
-            rgba(0, 0, 0, 0.06) 48.44%,
-            rgba(0, 0, 0, 0.5) 100%
-        );
 
-        &:hover .category__item-image {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                360deg,
+                rgba(0, 0, 0, 0.4) 0%,
+                rgba(0, 0, 0, 0.06) 48.44%,
+                rgba(0, 0, 0, 0.5) 100%
+            );
+            z-index: 1;
+        }
+
+        &:hover .tours__card-image {
             transform: scale(1.2);
         }
-        &:hover .category__button-more {
+
+        &:hover .tours__button-more {
             background-color: $green-400;
         }
-        &:active .category__button-more {
+
+        &:active .tours__button-more {
             background-color: $orange-200;
         }
     }
 
-    &__info {
+    &__card-info {
         padding: 50px 50px 0 50px;
-        width: 200px;
+        width: min(100%, 200px);
         height: 126px;
+        z-index: 2;
     }
 
-    &__item-title {
+    &__card-title {
         @include h3;
         text-align: start;
         color: $white;
     }
 
-    &__item-price {
+    &__card-price {
         @include p-small($white);
         margin-top: 16px;
     }
@@ -92,6 +139,7 @@
     &__footer {
         padding: 30px;
         margin-bottom: 12px;
+        z-index: 2;
     }
 
     &__button-more {
@@ -110,9 +158,9 @@
         cursor: pointer;
     }
 
-    &__item-image {
+    &__card-image {
         position: absolute;
-        z-index: -1;
+        z-index: 0;
         top: 0;
         left: 0;
         width: 100%;
@@ -123,23 +171,60 @@
 
     @media screen and (max-width: 1024px) {
         &__content {
-            width: 918px;
-            height: 1629px;
-            grid-template-rows: repeat(3, 531px);
-            grid-template-columns: repeat(2, 450px);
+            width: min(100%, 918px);
+            min-height: 1629px;
             gap: 18px;
+            padding: 0 max(0px, calc((100% - 918px) / 2));
         }
-        &__item-title {
-            width: 350px;
+
+        &__card {
+            width: min(100%, 450px);
+            flex: 0 1 450px;
         }
-        &__item {
-            width: 450px;
+
+        &__card-info {
+            width: min(100%, 350px);
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        padding: 0;
+
+        &__content {
+            width: min(100%, 600px);
+            gap: 15px;
+        }
+
+        &__card {
+            width: min(100%, 400px);
+            flex: 0 1 400px;
+            height: 450px;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        &__title {
+            @include h2-m;
+            margin-bottom: 30px;
+        }
+
+        &__link-item {
+            @include p-big-m;
+        }
+
+        &__list {
+            width: 277px;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: auto;
         }
     }
 
     @media screen and (max-width: 360px) {
         pointer-events: none;
         width: 360px;
+        padding: 0;
 
         &__title {
             @include h2-m;
@@ -167,25 +252,25 @@
             grid-template-rows: repeat(6, 1fr);
         }
 
-        &__item {
+        &__card {
             height: 318px;
             width: 318px;
         }
 
-        &__item-title {
+        &__card-title {
             @include h3-m;
             text-align: start;
             color: $white;
         }
-        &__item-price {
+        &__card-price {
             @include p-small-m;
             margin-top: 14px;
         }
-        &__item {
+        &__card {
             border-radius: 20px;
         }
 
-        &__info,
+        &__card-info,
         &__footer {
             padding: 25px;
             padding-top: 26px;
@@ -197,6 +282,4 @@
             padding: 0;
         }
     }
-
-
 }

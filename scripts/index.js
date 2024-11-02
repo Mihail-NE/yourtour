@@ -2,6 +2,7 @@ const link1 = document.getElementById("link1");
 const link2 = document.getElementById("link2");
 const link3 = document.getElementById("link3");
 const link4 = document.getElementById("link4");
+const tour = document.getElementById("search-tour");
 const header = document.getElementById("header");
 const select = document.getElementById("directionSelect");
 
@@ -10,11 +11,11 @@ const resetButton = document.querySelector(".form__button-reset");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    document.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-        });
-    });
+    // document.querySelectorAll("a").forEach(function (link) {
+    //     link.addEventListener("click", function (e) {
+    //         e.preventDefault();
+    //     });
+    // });
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
@@ -44,17 +45,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    addClickListener(link1, ".category");
+    addClickListener(link1, ".tours");
     addClickListener(link2, ".form");
     addClickListener(link3, ".comments");
     addClickListener(link4, ".story");
+    addClickListener(tour, ".tours");
 
     if (header) {
         document.addEventListener("scroll", () => {
             if (window.scrollY > 450) {
                 header.classList.add("scroll");
+                header.classList.remove("hidden");
             } else {
                 header.classList.remove("scroll");
+                header.classList.add("hidden");
             }
         });
     }

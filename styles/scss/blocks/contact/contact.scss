@@ -6,7 +6,12 @@
     &__wrap {
         display: flex;
         align-items: center;
-        gap: 30px;
+        gap: 33px;
+    }
+
+    &__img {
+        width: 370px;
+        height: 370px;
     }
 
     &__image {
@@ -21,6 +26,7 @@
         gap: 20px;
         width: 371px;
     }
+
     &__title {
         @include h3;
         color: $black;
@@ -36,22 +42,39 @@
         color: $black;
         cursor: pointer;
         text-decoration: none;
+        transition: all 0.3s ease;
 
         &:hover {
             text-decoration: underline;
         }
+
         &:active {
             color: $orange-200;
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 800px) {
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__title {
+            text-align: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
         pointer-events: none;
         width: 318px;
         margin: auto;
 
-        &__wrap {
-            flex-direction: column;
+        &__img {
+            width: 130px;
+            height: 130px;
         }
 
         &__image {
@@ -69,7 +92,6 @@
         &__text {
             @include p-normal-m;
             color: $gray-300;
-            text-align: center;
             width: 300px;
             margin: auto;
         }
