@@ -1,0 +1,46 @@
+.scroll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(#f3efe8, 0.6);
+    backdrop-filter: blur(20px);
+    z-index: 999;
+    animation: scroll 0.5s forwards;
+
+    @keyframes scroll {
+        0% {
+            top: -100%;
+        }
+        100% {
+            top: 0;
+        }
+    }
+
+    .header__logo {
+        background: url(/yourtour/assets/icons/YourTour-black.svg);
+    }
+
+    .header__nav-link,
+    .header__phone {
+        @include p-normal;
+        color: $black;
+
+        &:after {
+            background-color: $black;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .header__phone {
+            @include p-normal-m;
+            color: $black;
+        }
+
+        .header__logo {
+            background: url(/yourtour/assets/icons/YourTour-small-black.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+    }
+}

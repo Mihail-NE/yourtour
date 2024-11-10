@@ -1,0 +1,34 @@
+.intro {
+    &__button {
+        @include p-small($black);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 118px;
+        height: 34px;
+        border: none;
+        background-color: $white;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $orange-200;
+            color: white;
+        }
+
+        &:active {
+            background-color: $orange-100;
+        }
+
+        @media screen and (max-width: 650px) {
+            @include p-small-m;
+            margin-top: 12px;
+        }
+
+        @media screen and (max-width: 360px) {
+            @include p-small-m;
+            margin-top: 12px;
+        }
+    }
+}

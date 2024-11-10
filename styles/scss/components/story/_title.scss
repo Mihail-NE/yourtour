@@ -1,0 +1,52 @@
+.story {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+
+    @media screen and (max-width: 640px) {
+        max-width: 318px;
+        pointer-events: none;
+    }
+
+    &__wrap {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+
+        @media screen and (max-width: 640px) {
+            margin-top: 50px;
+            gap: 20px;
+        }
+    }
+
+    &__title {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    &__heading {
+        @include h2;
+
+        @media screen and (max-width: 640px) {
+            @include h2-m;
+            max-width: 318px;
+        }
+    }
+
+    &__description {
+        margin: auto;
+        @include p-normal;
+        margin-top: 30px;
+        color: $gray-300;
+        text-align: center;
+        width: 400px;
+
+        @media screen and (max-width: 640px) {
+            @include p-normal-m;
+            color: $gray-300;
+            margin-top: 18px;
+            max-width: 318px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.story {
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px 52px 40px;
+
+        @media screen and (max-width: 640px) {
+            padding: 30px;
+        }
+    }
+
+    &__links-list {
+        margin-right: 30px;
+        display: flex;
+        gap: 35px;
+
+        @media screen and (max-width: 950px) {
+            display: none;
+        }
+    }
+
+    &__link {
+        @include p-normal;
+        color: $white;
+        text-decoration: none;
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: $white;
+            transition: width 0.5s;
+        }
+
+        &:hover:after {
+            content: "";
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: -3px;
+            height: 1px;
+        }
+
+        &:active {
+            color: $orange-200;
+        }
+    }
+}

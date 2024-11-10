@@ -1,0 +1,151 @@
+.form {
+    &__inputs {
+        padding: 71px 70px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 33px 30px;
+        justify-content: space-between;
+
+        @media screen and (max-width: 1200px) {
+            gap: 20px;
+            row-gap: 33px;
+            padding: 0px;
+        }
+
+        @media screen and (max-width: 900px) {
+            padding: 0px;
+        }
+
+        @media screen and (max-width: 470px) {
+            gap: 30px;
+            height: 599px;
+            padding: 0;
+        }
+    }
+
+    &__input {
+        position: relative;
+        width: calc((100% - 20px) / 2);
+        min-width: 300px;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        @media screen and (max-width: 1200px) {
+            max-width: 389px;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        @media screen and (max-width: 470px) {
+            width: 278px;
+            height: 74px;
+        }
+    }
+
+    &__select-icon {
+        position: absolute;
+        top: 57px;
+        right: 21px;
+        height: 24px;
+        width: 24px;
+        background: url(/yourtour/assets/icons/ic-dropdown.svg);
+        cursor: pointer;
+        pointer-events: none;
+
+        @media screen and (max-width: 470px) {
+            top: 41px;
+            right: 10px;
+        }
+    }
+
+    &__input-field,
+    &__select {
+        @include p-normal;
+        font-family: "Roboto";
+        font-style: normal;
+        appearance: none;
+        color: $black;
+        padding: 19px;
+        border-radius: 10px;
+        border: 1px solid $beige-200;
+        background-color: $beige-100;
+        transition: all 0.3s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $beige-200;
+        }
+
+        &:focus {
+            border: 1px solid $gray-300;
+        }
+
+        option {
+            color: $black;
+        }
+
+        @media screen and (max-width: 470px) {
+            @include p-normal-m;
+            color: $black;
+            padding: 9px;
+            border-radius: 10px;
+            height: 46px;
+        }
+    }
+
+    &__textarea {
+        margin-top: 33px;
+        display: flex;
+        flex-direction: column;
+        width: min(calc(100% - 140px), 1030px);
+        min-height: 188px;
+        gap: 8px;
+        padding: 0 70px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media screen and (max-width: 1200px) {
+            width: 100%;
+            max-width: 798px;
+            padding: 0;
+        }
+
+        @media screen and (max-width: 470px) {
+            margin-top: 28px;
+            height: 163px;
+            width: 278px;
+        }
+    }
+
+    &__textarea-field {
+        @include p-normal;
+        font-family: Roboto;
+        height: 110px;
+        color: $black;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid $beige-200;
+        background-color: $beige-100;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        resize: none;
+
+        &:focus {
+            border: 1px solid $gray-300;
+        }
+
+        @media screen and (max-width: 470px) {
+            @include p-normal-m;
+            color: $black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+}

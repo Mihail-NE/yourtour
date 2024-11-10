@@ -1,0 +1,39 @@
+.form {
+    width: min(100%, 1170px);
+    margin: 0 auto;
+
+    &__wrap {
+        margin: 99px auto 0;
+        background-color: $white;
+        border-radius: 50px;
+        width: min(100%, 1170px);
+        min-height: 986px;
+
+        @media screen and (max-width: 1200px) {
+            width: 798px;
+            height: 845px;
+            padding: 61px;
+            min-height: 845px;
+            padding: 70px;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 500px;
+            padding: 40px;
+            height: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 400px;
+        }
+
+        @media screen and (max-width: 470px) {
+            margin: 0 auto;
+            margin-top: 39px;
+            padding: 20px;
+            border-radius: 30px;
+            width: 278px;
+            height: 1070px;
+        }
+    }
+}

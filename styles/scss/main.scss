@@ -1,19 +1,21 @@
+@import 'common/variables.scss';
+@import 'common/fonts.scss';
+@import 'common/reset.scss';
+@import 'common/base.scss';
+@import 'common/mixins.scss';
 
 
-@import 'core/variables';
-@import 'core/mixins';
-@import 'core/core';
+@import 'components/page/page.scss';
+@import 'components/intro/intro.scss';
+@import 'components/story/story.scss';
+@import 'components/tours/tours.scss';
+@import 'components/contact/contact.scss';
+@import 'components/comments/comments.scss';
+@import 'components/footer/footer.scss';
+@import 'components/form/form.scss';
+@import 'components/header/header.scss';
+@import 'components/gallery/gallery.scss';
 
-@import 'blocks/header/header.scss';
-@import 'blocks/contact/contact.scss';
-@import 'blocks/footer/footer.scss';
-@import 'blocks/comments/comments.scss';
-@import 'blocks/form/form.scss';
-@import 'blocks/gallery/gallery.scss';
-@import 'blocks/intro/intro.scss';
-@import 'blocks/page/page.scss';
-@import 'blocks/story/story.scss';
-@import 'blocks/tours/tours.scss';
 
 
 

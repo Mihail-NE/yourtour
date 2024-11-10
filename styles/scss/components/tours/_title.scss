@@ -1,0 +1,16 @@
+.tours {
+    &__title {
+        @include h2;
+        margin-bottom: 35px;
+
+        @media screen and (max-width: 600px) {
+            @include h2-m;
+            margin-bottom: 30px;
+        }
+
+        @media screen and (max-width: 360px) {
+            @include h2-m;
+            margin-bottom: 30px;
+        }
+    }
+}

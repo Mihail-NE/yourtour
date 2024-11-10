@@ -1,0 +1,115 @@
+@mixin transition($property, $duration) {
+    transition: $property $duration ease-in-out;
+}
+
+@mixin h1() {
+    font-weight: 700;
+    font-size: 96px;
+    color: $black;
+    line-height: 104.64px;
+    letter-spacing: 1.92px;
+    text-align: center;
+}
+
+@mixin h1-m() {
+    font-weight: 700;
+    font-size: 34px;
+    color: $black;
+    line-height: 38.08px;
+    letter-spacing: 0.68px;
+    text-align: center;
+}
+
+@mixin h2() {
+    font-weight: 700;
+    font-size: 59px;
+    color: $black;
+    line-height: 73.16px;
+    text-align: center;
+}
+@mixin h2-m() {
+    font-weight: 700;
+    font-size: 34px;
+    color: $black;
+    line-height: 38.08px;
+    letter-spacing: 0.68px;
+    text-align: center;
+}
+
+@mixin h3() {
+    font-weight: 500;
+    font-size: 35px;
+    color: $black;
+    line-height: 42.7px;
+    text-align: center;
+}
+
+@mixin h3-m() {
+    font-weight: 700;
+    font-size: 23px;
+    color: $black;
+    line-height: 27.6px;
+    letter-spacing: 0.92px;
+    text-align: center;
+}
+
+@mixin p-normal() {
+    font-weight: 400;
+    font-size: 20px;
+    color: $white;
+    line-height: 28px;
+}
+
+@mixin p-normal-m() {
+    font-weight: 400;
+    font-size: 16px;
+    color: $white;
+    line-height: 23px;
+}
+
+@mixin p-small($color) {
+    font-weight: 400;
+    font-size: 17px;
+    color: $color;
+    line-height: 24.14px;
+    letter-spacing: -0.17px;
+}
+
+@mixin p-small-m {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 23px;
+    letter-spacing: -0.17px;
+}
+
+@mixin p-big($color) {
+    font-weight: 700;
+    font-size: 23px;
+    color: $color;
+    line-height: 28.06px;
+}
+
+@mixin p-big-m {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+@mixin big-button($color, $bg-color, $hover, $active) {
+    width: 235px;
+    border-radius: 10px;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: $color;
+    background-color: $bg-color;
+    line-height: 28.4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: $hover;
+    }
+    &:active {
+        background-color: $active;
+    }
+}

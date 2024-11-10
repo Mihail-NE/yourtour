@@ -1,0 +1,32 @@
+.contact {
+    &__text {
+        @include p-normal;
+        color: $gray-300;
+
+        @media screen and (max-width: 800px) {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            @include p-normal-m;
+            color: $gray-300;
+            width: 300px;
+            margin: auto;
+        }
+    }
+
+    &__email {
+        color: $black;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:active {
+            color: $orange-200;
+        }
+    }
+}

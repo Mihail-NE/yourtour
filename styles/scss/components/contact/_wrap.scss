@@ -1,0 +1,21 @@
+.contact {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        pointer-events: none;
+        width: 318px;
+        margin: auto;
+    }
+}

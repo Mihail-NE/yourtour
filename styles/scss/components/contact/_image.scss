@@ -1,0 +1,23 @@
+.contact {
+    &__img {
+        width: 370px;
+        height: 370px;
+
+        @media screen and (max-width: 400px) {
+            width: 130px;
+            height: 130px;
+        }
+    }
+
+    &__image {
+        height: 370px;
+        width: 370px;
+        border-radius: 50px;
+
+        @media screen and (max-width: 400px) {
+            border-radius: 20px;
+            height: 133px;
+            width: 130px;
+        }
+    }
+}
