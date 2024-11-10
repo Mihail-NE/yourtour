@@ -1985,6 +1985,19 @@ body {
     line-height: 23px;
   }
 }
+.header .header__logo {
+  width: 181.84px;
+  height: 30.24px;
+  background: url(/yourtour/assets/icons/YourTour-small-white.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (max-width: 800px) {
+  .header .header__logo {
+    background: url(/yourtour/assets/icons/YourTour-small-white.svg);
+  }
+}
 
 .header__nav-list {
   display: flex;
@@ -2043,7 +2056,19 @@ body {
   }
 }
 .scroll .header__logo {
+  width: 181.84px;
+  height: 30.24px;
   background: url(/yourtour/assets/icons/YourTour-black.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media screen and (max-width: 400px) {
+  .scroll .header__logo {
+    width: 133px;
+    height: 22px;
+    background: url(/yourtour/assets/icons/YourTour-small-black.svg);
+  }
 }
 .scroll .header__nav-link,
 .scroll .header__phone {
@@ -2064,12 +2089,6 @@ body {
     color: #FFF;
     line-height: 23px;
     color: #1B1F2B;
-  }
-  .scroll .header__logo {
-    background: url(/yourtour/assets/icons/YourTour-small-black.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
   }
 }
 
