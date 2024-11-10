@@ -47,13 +47,15 @@
     .header__logo {
         width: 181.84px;
         height: 30.24px;
-        background: url(/yourtour/assets/icons/YourTour-small-white.svg);
+        background: url(/yourtour/assets/icons/YourTour.svg);
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
 
         @media screen and (max-width: 800px) {
-            background: url(/yourtour/assets/icons/YourTour-small-white.svg);
+            width: 133px;
+            height: 22px;
+            background: url(/yourtour/assets/icons/YourTour-small.svg);
         }
     }
 }
