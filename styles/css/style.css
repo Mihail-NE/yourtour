@@ -1527,7 +1527,7 @@ body {
 }
 .form__select-icon {
   position: absolute;
-  top: 57px;
+  top: 45px;
   right: 21px;
   height: 24px;
   width: 24px;
@@ -1537,7 +1537,7 @@ body {
 }
 @media screen and (max-width: 470px) {
   .form__select-icon {
-    top: 41px;
+    top: 35px;
     right: 10px;
   }
 }
@@ -1988,7 +1988,7 @@ body {
 .header .header__logo {
   width: 181.84px;
   height: 30.24px;
-  background: url(/yourtour/assets/icons/YourTour.svg);
+  background: url(/assets/icons/YourTour.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1997,7 +1997,7 @@ body {
   .header .header__logo {
     width: 133px;
     height: 22px;
-    background: url(/yourtour/assets/icons/YourTour-small.svg);
+    background: url(/assets/icons/YourTour-small.svg);
   }
 }
 
