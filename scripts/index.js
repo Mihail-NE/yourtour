@@ -11,11 +11,11 @@ const resetButton = document.querySelector(".form__button-reset");
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // document.querySelectorAll("a").forEach(function (link) {
-    //     link.addEventListener("click", function (e) {
-    //         e.preventDefault();
-    //     });
-    // });
+    document.querySelectorAll('.tours__link-item').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+        });
+    });
 
     form.addEventListener("submit", function (e) {
         e.preventDefault();
