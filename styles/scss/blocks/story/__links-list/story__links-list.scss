@@ -1,0 +1,9 @@
+.story__links-list {
+    margin-right: 30px;
+    display: flex;
+    gap: 35px;
+
+    @media screen and (max-width: 950px) {
+        display: none;
+    }
+}

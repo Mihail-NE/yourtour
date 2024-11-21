@@ -1,0 +1,15 @@
+.story__description {
+    margin: auto;
+    @include p-normal();
+    margin-top: 30px;
+    color: $gray-300;
+    text-align: center;
+    width: 400px;
+
+    @media screen and (max-width: 640px) {
+        @include p-normal-m();
+        color: $gray-300;
+        margin-top: 18px;
+        max-width: 318px;
+    }
+}

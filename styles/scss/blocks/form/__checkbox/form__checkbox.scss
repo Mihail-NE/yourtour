@@ -1,0 +1,81 @@
+.form__checkbox {
+    margin-top: 33px;
+    display: flex;
+    align-items: center;
+    gap: 19px;
+
+    @media screen and (max-width: 1200px) {
+        gap: 11px;
+    }
+
+    @media screen and (max-width: 470px) {
+        margin-top: 31px;
+        gap: 10px;
+        align-items: start;
+        width: 278px;
+    }
+
+    &-input {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        appearance: none;
+        outline: none;
+        border: 2px solid $black;
+        position: relative;
+        width: 26px;
+        height: 26px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:checked::before {
+            position: absolute;
+            content: "";
+            width: 12.24px;
+            height: 7.12px;
+            top: 4px;
+            left: 4px;
+            border-color: $black;
+            border-bottom: 2px solid;
+            border-left: 2px solid;
+            transform: rotate(-45deg);
+        }
+
+        @media screen and (max-width: 470px) {
+            width: 35px;
+            height: 20px;
+
+            &:checked::before {
+                width: 9.24px;
+                height: 5.12px;
+                top: 20%;
+                left: 20%;
+            }
+        }
+    }
+
+    &-label {
+        @include p-small($gray-300);
+
+        @media screen and (max-width: 470px) {
+            @include p-small-m();
+            color: $gray-300;
+        }
+    }
+
+    &-link {
+        @include p-small($black);
+        cursor: pointer;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 470px) {
+            @include p-small-m();
+            color: $black;
+        }
+    }
+}

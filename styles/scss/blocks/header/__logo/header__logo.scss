@@ -1,0 +1,27 @@
+.header__logo {
+    width: 181.84px;
+    height: 30.24px;
+    background: url(/yourtour/assets/icons/YourTour.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media screen and (max-width: 800px) {
+        width: 133px;
+        height: 22px;
+        background: url(/yourtour/assets/icons/YourTour-small.svg);
+    }
+
+    .scroll & {
+        background: url(/yourtour/assets/icons/YourTour-black.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+
+        @media screen and (max-width: 400px) {
+            width: 133px;
+            height: 22px;
+            background: url(/yourtour/assets/icons/YourTour-small-black.svg);
+        }
+    }
+}

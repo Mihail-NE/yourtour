@@ -1,0 +1,11 @@
+.story__wrap {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media screen and (max-width: 640px) {
+        margin-top: 50px;
+        gap: 20px;
+    }
+}

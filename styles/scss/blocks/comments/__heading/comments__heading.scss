@@ -1,0 +1,9 @@
+.comments__heading {
+    @include h2();
+    width: 529px;
+
+    @media screen and (max-width: 550px) {
+        @include h2-m();
+        max-width: 318px;
+    }
+}

@@ -1,0 +1,26 @@
+.intro {
+    position: relative;
+    height: 831px;
+    background-image: url(/yourtour/assets/img/header-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @media screen and (max-width: 1024px) {
+        background-image: url(/yourtour/assets/img/header-image-small.jpg);
+    }
+
+    @media screen and (max-width: 650px) {
+        height: 488px;
+    }
+
+    @media screen and (max-width: 360px) {
+        pointer-events: none;
+    }
+}
+
+
+@import './__content/intro__content';
+@import './__title/intro__title';
+@import './__subtitle/intro__subtitle';
+@import './__button/intro__button';

@@ -1,0 +1,10 @@
+.story__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 52px 40px;
+
+    @media screen and (max-width: 640px) {
+        padding: 30px;
+    }
+}

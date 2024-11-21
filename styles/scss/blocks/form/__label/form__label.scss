@@ -1,0 +1,9 @@
+.form__label {
+    @include p-normal();
+    color: $black;
+
+    @media screen and (max-width: 470px) {
+       @include p-normal-m();
+       color: $black;
+    }
+}

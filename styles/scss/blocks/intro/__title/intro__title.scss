@@ -1,0 +1,21 @@
+.intro__title {
+    @include h1();
+    color: $white;
+    width: 768px;
+    height: 315px;
+    text-align: center;
+
+    @media screen and (max-width: 650px) {
+        @include h1-m();
+        color: $white;
+        width: 310px;
+        height: 114px;
+    }
+
+    @media screen and (max-width: 360px) {
+        @include h1-m();
+        color: $white;
+        width: 310px;
+        height: 114px;
+    }
+}

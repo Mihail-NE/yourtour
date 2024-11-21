@@ -1,0 +1,13 @@
+.form {
+    width: min(100%, 1170px);
+    margin: 0 auto;
+}
+
+@import "./__wrap/form__wrap";
+@import "./__header/form__header";
+@import "./__inputs/form__inputs";
+@import "./__textarea/form__textarea";
+@import "./__buttons/form__buttons";
+@import "./__radio/form__radio";
+@import "./__checkbox/form__checkbox";
+@import "./__label/form__label";

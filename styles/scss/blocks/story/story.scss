@@ -1,0 +1,20 @@
+.story {
+    max-width: fit-content;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @media screen and (max-width: 640px) {
+        max-width: 318px;
+        pointer-events: none;
+    }
+}
+
+@import "./__wrap/story__wrap";
+@import "./__title/story__title";
+@import "./__heading/story__heading";
+@import "./__description/story__description";
+@import "./__card/story__card";
+@import "./__footer/story__footer";
+@import "./__links-list/story__links-list";
+@import "./__link/story__link";
+@import "./__button-more/story__button-more";

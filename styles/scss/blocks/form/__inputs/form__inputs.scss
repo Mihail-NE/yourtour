@@ -1,0 +1,102 @@
+.form__inputs {
+    padding: 71px 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 33px 30px;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1200px) {
+        gap: 20px;
+        row-gap: 33px;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 470px) {
+        gap: 30px;
+        height: 599px;
+        padding: 0;
+    }
+}
+
+.form__input {
+    position: relative;
+    width: calc((100% - 20px) / 2);
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @media screen and (max-width: 1200px) {
+        max-width: 389px;
+    }
+
+    @media screen and (max-width: 900px) {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+    @media screen and (max-width: 470px) {
+        width: 278px;
+        height: 74px;
+    }
+}
+
+.form__select-icon {
+    position: absolute;
+    top: 45px;
+    right: 21px;
+    height: 24px;
+    width: 24px;
+    background: url(/yourtour/assets/icons/ic-dropdown.svg);
+    cursor: pointer;
+    pointer-events: none;
+
+    @media screen and (max-width: 470px) {
+        top: 35px;
+        right: 10px;
+    }
+}
+
+.form__input-field,
+.form__select {
+    @include p-normal();
+    font-family: "Roboto";
+    appearance: none;
+    color: $black;
+    padding: 19px;
+    border-radius: 10px;
+    border: 1px solid $beige-200;
+    background-color: $beige-100;
+    @include transition(all, 0.3s);
+    cursor: pointer;
+
+    &::placeholder {
+        color: $gray-300;
+    }
+
+    &:hover {
+        background-color: $beige-200;
+    }
+
+    &:focus {
+        border: 1px solid $gray-300;
+    }
+
+    option {
+        color: $black;
+    }
+
+    @media screen and (max-width: 470px) {
+        @include p-normal-m();
+        color: $black;
+        padding: 9px;
+        border-radius: 10px;
+        height: 46px;
+    }
+}
+
+.form__select-placeholder {
+    color: $gray-300;
+}

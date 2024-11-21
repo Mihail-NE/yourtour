@@ -1,0 +1,34 @@
+.header {
+    position: absolute;
+    width: 100%;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    @include transition(all, 0.3s);
+
+    &.scroll {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba($beige-200, 0.6);
+        backdrop-filter: blur(20px);
+        z-index: 999;
+        animation: scroll 0.5s forwards;
+
+        @keyframes scroll {
+            0% {
+                top: -100%;
+            }
+            100% {
+                top: 0;
+            }
+        }
+    }
+}
+
+@import "./__wrap/header__wrap";
+@import "./__nav/header__nav";
+@import "./__logo/header__logo";
+@import "./__phone/header__phone";

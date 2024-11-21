@@ -1,0 +1,16 @@
+.header__wrap {
+    padding: 0 20px;
+    height: 32px;
+    width: 1168px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+        max-width: 910px;
+    }
+
+    @media screen and (max-width: 390px) {
+        max-width: 320px;
+    }
+}

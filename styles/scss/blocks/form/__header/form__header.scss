@@ -1,0 +1,34 @@
+.form__header {
+    width: min(100%, 458px);
+    margin: auto;
+
+    @media screen and (max-width: 470px) {
+        width: 318px;
+        height: 104px;
+    }
+}
+
+.form__title {
+    @include h2();
+    margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (max-width: 470px) {
+        @include h2-m();
+        margin-bottom: 20px;
+    }
+}
+
+.form__description {
+    @include p-normal();
+    color: $gray-300;
+    text-align: center;
+    width: min(100%, 400px);
+    margin: auto;
+
+    @media screen and (max-width: 470px) {
+        @include p-normal-m();
+        color: $gray-300;
+        width: 318px;
+    }
+}

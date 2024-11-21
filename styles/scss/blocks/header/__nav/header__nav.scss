@@ -1,0 +1,51 @@
+.header__nav {
+    &-list {
+        display: flex;
+        gap: 50px;
+
+        @media screen and (max-width: 1024px) {
+            gap: 30px;
+        }
+
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    &-link {
+        @include p-normal();
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+        color: $white;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: $white;
+            @include transition(width, 0.5s);
+        }
+
+        &:hover:after {
+            width: 100%;
+            left: 0;
+        }
+
+        @media screen and (max-width: 390px) {
+            @include p-normal-m();
+        }
+
+        .scroll & {
+            @include p-normal();
+            color: $black;
+
+            &:after {
+                background-color: $black;
+            }
+        }
+    }
+}

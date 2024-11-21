@@ -1,0 +1,47 @@
+.form__textarea {
+    margin: 33px auto;
+    display: flex;
+    flex-direction: column;
+    width: min(100% - 140px, 1030px);
+    min-height: 188px;
+    gap: 8px;
+    padding: 0 70px;
+
+    @media screen and (max-width: 1200px) {
+        width: 100%;
+        max-width: 798px;
+        padding: 0;
+    }
+
+    @media screen and (max-width: 470px) {
+        margin-top: 28px;
+        height: 163px;
+        width: 278px;
+    }
+
+    &-field {
+        @include p-normal();
+        font-family: Roboto;
+        height: 110px;
+        color: $black;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid $beige-200;
+        background-color: $beige-100;
+        @include transition(all, 0.3s);
+        cursor: pointer;
+        outline: none;
+        resize: none;
+
+        &:focus {
+            border: 1px solid $gray-300;
+        }
+
+        @media screen and (max-width: 470px) {
+            @include p-normal-m();
+            color: $black;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    }
+}

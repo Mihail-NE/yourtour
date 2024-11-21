@@ -1,0 +1,20 @@
+.intro__subtitle {
+    @include p-normal();
+    text-align: center;
+    width: 562px;
+    height: 56px;
+
+    @media screen and (max-width: 1024px) {
+        max-width: 400px;
+    }
+
+    @media screen and (max-width: 650px) {
+        @include p-normal-m();
+        width: 310px;
+    }
+
+    @media screen and (max-width: 360px) {
+        @include p-normal-m();
+        width: 310px;
+    }
+}

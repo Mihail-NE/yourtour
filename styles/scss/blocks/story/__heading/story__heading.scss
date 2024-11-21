@@ -1,0 +1,8 @@
+.story__heading {
+    @include h2();
+
+    @media screen and (max-width: 640px) {
+        @include h2-m();
+        max-width: 318px;
+    }
+}

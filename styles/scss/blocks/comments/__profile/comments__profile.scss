@@ -1,0 +1,35 @@
+.comments__profile {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 550px) {
+        margin-top: 40px;
+        align-items: end;
+    }
+
+    &-name {
+        @include h3();
+        color: $black;
+        text-align: left;
+
+        @media screen and (max-width: 550px) {
+            @include h3-m();
+            text-align: start;
+        }
+    }
+
+    &-tour {
+        @include p-small($gray-300);
+        margin-top: 8px;
+
+        @media screen and (max-width: 550px) {
+            @include p-small-m();
+        }
+    }
+
+    &-image {
+        width: 75px;
+        height: 75px;
+        border-radius: 100px;
+    }
+}

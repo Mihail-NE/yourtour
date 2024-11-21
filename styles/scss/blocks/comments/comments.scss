@@ -1,0 +1,13 @@
+.comments {
+    margin: 0 auto;
+    max-width: 1170px;
+    padding: 0 20px;
+}
+
+@import "./__wrap/comments__wrap";
+@import "./__title/comments__title";
+@import "./__heading/comments__heading";
+@import "./__description/comments__description";
+@import "./__item/comments__item";
+@import "./__info/comments__info";
+@import "./__profile/comments__profile";

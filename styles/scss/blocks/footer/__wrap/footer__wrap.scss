@@ -1,0 +1,21 @@
+.footer__wrap {
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1168px;
+
+    @media screen and (max-width: 1024px) {
+        max-width: 918px;
+    }
+
+    @media screen and (max-width: 750px) {
+        max-width: 325px;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    @media screen and (max-width: 400px) {
+        gap: 8px;
+    }
+}

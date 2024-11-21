@@ -1,0 +1,9 @@
+.footer__social-text {
+    @include p-normal();
+    color: $gray-300;
+
+    @media screen and (max-width: 400px) {
+        @include p-normal-m();
+        color: $gray-300;
+    }
+}
