@@ -1,8 +1,8 @@
-@import "common/variables.scss";
-@import "common/fonts.scss";
-@import "common/reset.scss";
-@import "common/base.scss";
-@import "common/mixins.scss";
+@import "core/variables.scss";
+@import "core/fonts.scss";
+@import "core/reset.scss";
+@import "core/base.scss";
+@import "core/mixins.scss";
 
 @import "blocks/intro/intro.scss";
 @import "blocks/story/story.scss";
@@ -15,4 +15,3 @@
 @import "blocks/gallery/gallery.scss";
 
 // sass --watch ./styles/scss/main.scss ./styles/css/style.css
-// sass --watch ./styles/scss/main.scss ./styles/test/stl.css
