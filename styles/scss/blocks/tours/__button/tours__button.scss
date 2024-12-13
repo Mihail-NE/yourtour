@@ -1,29 +1,21 @@
 .tours__button {
+    font-weight: 700;
+    font-size: 22px;
+    color: $white;
+    line-height: 28.06px;
+    background-color: inherit;
+    border: none;
+
     &-icon {
         width: 24px;
         height: 24px;
         background: url(/yourtour/assets/icons/arrow\ bt.svg);
     }
 
-    &-more {
-        font-weight: 700;
-        font-size: 22px;
-        color: $white;
-        line-height: 28.06px;
-        background-color: inherit;
-        border: none;
-        display: flex;
-        align-items: center;
-        padding: 7px 20px;
-        border-radius: 50px;
-        gap: 15px;
-        transition: all 0.3s ease;
-        cursor: pointer;
-
-        @media screen and (max-width: 360px) {
-            @include p-big-m;
-            letter-spacing: -0.4px;
-            padding: 0;
-        }
+    @media screen and (max-width: 360px) {
+        @include p-big-m;
+        letter-spacing: -0.4px;
+        padding: 0;
     }
+
 }

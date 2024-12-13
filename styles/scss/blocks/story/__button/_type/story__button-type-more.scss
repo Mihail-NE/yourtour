@@ -1,17 +1,14 @@
-.story__button-more {
-    @include p-big($white);
-    background-color: inherit;
-    border: none;
+.story__button-type-more {
     display: flex;
-    align-items: center;
+    align-items: start;
     padding: 7px 20px;
     border-radius: 50px;
     letter-spacing: -0.5px;
-    gap: 14px;
+    gap: 13px;
     @include transition(all, 0.3s);
     cursor: pointer;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 450px) {
         @include p-big-m();
         padding: 0;
     }

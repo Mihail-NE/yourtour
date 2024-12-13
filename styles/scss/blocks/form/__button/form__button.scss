@@ -1,0 +1,17 @@
+.form__button {
+    &-wrap {
+        margin-top: 33px;
+        display: flex;
+        gap: 30px;
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        @media screen and (max-width: 600px) {
+            margin-top: 30px;
+            gap: 10px;
+        }
+    }
+}

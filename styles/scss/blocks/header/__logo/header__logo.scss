@@ -1,10 +1,11 @@
 .header__logo {
-    width: 181.84px;
-    height: 30.24px;
+    width: 182.84px;
+    height: 33.24px;
     background: url(/yourtour/assets/icons/YourTour.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 
     @media screen and (max-width: 800px) {
         width: 133px;

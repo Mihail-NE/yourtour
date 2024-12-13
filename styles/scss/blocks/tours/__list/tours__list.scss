@@ -13,7 +13,6 @@
         justify-content: center;
         margin: auto;
     }
-
 }
 
 .tours__link {
@@ -42,6 +41,14 @@
             height: 2px;
         }
 
+        &:active {
+            color: $orange-200;
+
+            &:after {
+                background-color: $orange-200;
+            }
+        }
+
         @media screen and (max-width: 700px) {
             @include p-big-m();
         }
@@ -61,6 +68,10 @@
             &:after,
             &:hover:after {
                 display: none;
+            }
+
+            @media screen and (max-width: 360px) {
+                padding-bottom: 0px;
             }
         }
     }

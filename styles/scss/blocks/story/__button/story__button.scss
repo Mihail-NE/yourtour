@@ -1,0 +1,11 @@
+.story__button {
+    @include p-big($white);
+    background-color: inherit;
+    border: none;
+
+    &-icon {
+        width: 24px;
+        height: 24px;
+        background: url(/yourtour/assets/icons/arrow\ bt.svg);
+    }
+}

@@ -10,6 +10,10 @@
         max-width: 910px;
     }
 
+    @media screen and (max-width: 950px) {
+        pointer-events: none;
+    }
+
     @media screen and (max-width: 390px) {
         max-width: 320px;
     }

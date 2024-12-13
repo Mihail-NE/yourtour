@@ -4,29 +4,54 @@
 
     &:active .footer__link-text {
         color: $orange-200;
+
+        &:after {
+            background-color: $orange-200;
+        }
     }
 
     @media screen and (max-width: 400px) {
         gap: 5px;
     }
 
+    &-wrap {
+        display: flex;
+        gap: 30px;
+        width: 408px;
+
+        @media screen and (max-width: 400px) {
+            gap: 10px;
+            width: 307px;
+            justify-content: space-between;
+        }
+    }
+
     &-icon {
         width: 22px;
         height: 22px;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: end;
         background-size: contain;
 
-        &--instagram {
-            background-image: url(/yourtour/assets/img/inst.png);
+        &-telegram {
+            background-image: url(/yourtour/assets/img/Vector.png);
+            background-position: center;
         }
 
-        &--facebook {
+        &-facebook {
             background-image: url(/yourtour/assets/img/fb\(1\).png);
         }
 
-        &--vk {
+        &-vk {
             background-image: url(/yourtour/assets/img/vk.png);
+        }
+
+        @media screen and (max-width: 400px) {
+            &-telegram {
+               width: 18px;
+               height: 18px;
+               background-position: end;
+            }
         }
     }
 
@@ -35,7 +60,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        gap: 11px;
+        gap: 12px;
         color: $black;
         text-decoration: none;
 
@@ -63,6 +88,7 @@
             @include p-normal-m();
             color: $black;
             gap: 5px;
+
         }
     }
 }

@@ -1,0 +1,13 @@
+.gallery__group-photo {
+    border-radius: 50px;
+    background-position: center;
+    object-fit: cover;
+
+    @media screen and (max-width: 600px) {
+        border-radius: 30px;
+    }
+
+    @media screen and (max-width: 400px) {
+        border-radius: 20px;
+    }
+}

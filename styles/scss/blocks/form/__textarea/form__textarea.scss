@@ -7,14 +7,20 @@
     gap: 8px;
     padding: 0 70px;
 
-    @media screen and (max-width: 1200px) {
-        width: 100%;
-        max-width: 798px;
-        padding: 0;
+    @media screen and (max-width: 1024px) {
+        padding: 0 60px;
+        margin: 33px 0;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding: 0 40px;
+        width: min(100% - 80px, 1030px);
     }
 
     @media screen and (max-width: 470px) {
         margin-top: 28px;
+        padding: 0;
+        margin-bottom: 0;
         height: 163px;
         width: 278px;
     }

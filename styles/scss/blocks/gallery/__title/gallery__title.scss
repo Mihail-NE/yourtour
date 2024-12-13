@@ -20,6 +20,10 @@
     text-align: center;
     width: 400px;
 
+    @media screen and (max-width: 1024px) {
+        margin-top: 29px;
+    }
+
     @media screen and (max-width: 670px) {
         @include p-normal-m();
         margin-top: 19px;

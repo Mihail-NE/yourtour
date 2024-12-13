@@ -6,14 +6,14 @@
     &__wrap {
         display: flex;
         align-items: center;
-        gap: 33px;
+        gap: 30px;
 
         @media screen and (max-width: 800px) {
             flex-direction: column;
         }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
         pointer-events: none;
         width: 318px;
         margin: auto;

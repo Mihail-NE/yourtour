@@ -1,25 +1,16 @@
 .form__wrap {
-    margin: 99px auto 0;
+    margin: 100px auto 0;
     background-color: $white;
     border-radius: 50px;
-    width: min(100%, 1170px);
-    min-height: 986px;
+    width: min(calc(100% - 106px), 1170px);
+    height: 986px;
+    // height: auto;
 
-    @media screen and (max-width: 1200px) {
-        width: 798px;
-        height: 845px;
-        padding: 70px;
-        min-height: 845px;
-    }
 
-    @media screen and (max-width: 900px) {
-        width: 500px;
-        padding: 40px;
+
+    @media screen and (max-width: 1000px) {
         height: auto;
-    }
-
-    @media screen and (max-width: 600px) {
-        width: 400px;
+        padding-bottom: 60px;
     }
 
     @media screen and (max-width: 470px) {
@@ -29,4 +20,6 @@
         width: 278px;
         height: 1070px;
     }
+
+
 }

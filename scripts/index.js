@@ -5,11 +5,29 @@ const link4 = document.getElementById("link4");
 const tour = document.getElementById("search-tour");
 const header = document.getElementById("header");
 const select = document.getElementById("directionSelect");
+const logo = document.getElementById("logo");
 
 const form = document.querySelector(".form__wrap");
-const resetButton = document.querySelector(".form__button-reset");
+const resetButton = document.querySelector(".form__button-type-reset");
+const inputs = form.querySelectorAll('input, select, textarea');
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    inputs.forEach(input => {
+        input.oninvalid = function(e) {
+            e.target.setCustomValidity('');
+            if (!e.target.validity.valid) {
+                e.target.setCustomValidity(e.target.title);
+            }
+        };
+
+        input.oninput = function(e) {
+            e.target.setCustomValidity('');
+        };
+    });
 
     document.querySelectorAll('.tours__link-item').forEach(link => {
         link.addEventListener('click', event => {
@@ -26,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         form.reset();
         indicator.style.transform = "rotate(0deg)";
-        select.classList.add("form__select-placeholder");
+        select.classList.add("form__input-type-select-placeholder");
     });
 
     function scrollToElement(selector) {
@@ -50,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     addClickListener(link3, ".comments");
     addClickListener(link4, ".story");
     addClickListener(tour, ".tours");
+    addClickListener(logo, ".intro");
 
     if (header) {
         document.addEventListener("scroll", () => {
@@ -94,9 +113,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const value = select.value;
 
         if (value === "default") {
-            select.classList.add("form__select-placeholder");
+            select.classList.add("form__input-type-select-placeholder");
         } else {
-            select.classList.remove("form__select-placeholder");
+            select.classList.remove("form__input-type-select-placeholder");
         }
     });
 });

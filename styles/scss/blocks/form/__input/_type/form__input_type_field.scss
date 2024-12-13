@@ -1,0 +1,32 @@
+.form__input-type-field {
+    @include p-normal();
+    font-family: "Roboto";
+    appearance: none;
+    color: $black;
+    padding: 19px;
+    border-radius: 10px;
+    border: 1px solid $beige-200;
+    background-color: $beige-100;
+    @include transition(all, 0.3s);
+    cursor: pointer;
+
+    &::placeholder {
+        color: $gray-300;
+    }
+
+    &:hover {
+        background-color: $beige-200;
+    }
+
+    &:focus {
+        border: 1px solid $gray-300;
+    }
+
+    @media screen and (max-width: 470px) {
+        @include p-normal-m();
+        color: $black;
+        padding: 9px;
+        border-radius: 10px;
+        height: 46px;
+    }
+}

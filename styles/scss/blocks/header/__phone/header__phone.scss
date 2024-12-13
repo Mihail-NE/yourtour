@@ -1,8 +1,5 @@
-.header__phone {
-    &-link {
-        all: unset;
-    }
-
+.header__phone-link {
+    all: unset;
     @include p-normal();
     position: relative;
     text-decoration: none;

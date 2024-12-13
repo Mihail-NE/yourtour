@@ -1,6 +1,6 @@
 @import "core/variables.scss";
 @import "core/fonts.scss";
-@import "core/reset.scss";
+@import "core/global.scss";
 @import "core/base.scss";
 @import "core/mixins.scss";
 
@@ -13,5 +13,69 @@
 @import "blocks/form/form.scss";
 @import "blocks/header/header.scss";
 @import "blocks/gallery/gallery.scss";
+
+@import "blocks/comments/__heading/comments__heading.scss";
+@import "blocks/comments/__description/comments__description.scss";
+@import "blocks/comments/__item/comments__item.scss";
+@import "blocks/comments/__profile/comments__profile.scss";
+
+@import "blocks/contact/__image/contact__image.scss";
+@import "blocks/contact/__info/contact__info.scss";
+@import "blocks/contact/__text/contact__text.scss";
+@import "blocks/contact/__wrap/contact__wrap.scss";
+
+@import "blocks/footer/__wrap/footer__wrap.scss";
+@import "blocks/footer/__social/footer__social.scss";
+@import "blocks/footer/__link/footer__link.scss";
+
+@import "blocks/form/__wrap/form__wrap.scss";
+@import "blocks/form/__header/form__header.scss";
+@import "blocks/form/__textarea/form__textarea.scss";
+@import "blocks/form/__button/form__button.scss";
+@import "blocks/form/__button/_type/form__button_type_search.scss";
+@import "blocks/form/__button/_type/form__button_type_reset.scss";
+@import "blocks/form/__input/form__input.scss";
+@import "blocks/form/__input/_type/form__input_type_field.scss";
+@import "blocks/form/__input/_type/form__input_type_select.scss";
+@import "blocks/form/__radio/form__radio.scss";
+@import "blocks/form/__checkbox/form__checkbox.scss";
+@import "blocks/form/__label/form__label.scss";
+
+@import "blocks/gallery/__wrap/gallery__wrap.scss";
+@import "blocks/gallery/__title/gallery__title.scss";
+@import "blocks/gallery/__group/gallery__group.scss";
+@import "blocks/gallery/__group/_photo/gallery__group-photo.scss";
+@import "blocks/gallery/__group/_photo/_type/gallery__group-photo_type_first.scss";
+@import "blocks/gallery/__group/_photo/_type/gallery__group-photo_type_second.scss";
+@import "blocks/gallery/__group/_photo/_type/gallery__group-photo_type_third.scss";
+
+@import "blocks/header/__wrap/header__wrap.scss";
+@import "blocks/header/__nav/header__nav.scss";
+@import "blocks/header/__logo/header__logo.scss";
+@import "blocks/header/__phone/header__phone.scss";
+
+@import "blocks/intro/__content/intro__content.scss";
+@import "blocks/intro/__title/intro__title.scss";
+@import "blocks/intro/__subtitle/intro__subtitle.scss";
+@import "blocks/intro/__button/intro__button.scss";
+
+@import "blocks/story/__wrap/story__wrap.scss";
+@import "blocks/story/__title/story__title.scss";
+@import "blocks/story/__heading/story__heading.scss";
+@import "blocks/story/__description/story__description.scss";
+@import "blocks/story/__card/story__card.scss";
+@import "blocks/story/__footer/story__footer.scss";
+@import "blocks/story/__links-list/story__links-list.scss";
+@import "blocks/story/__link/story__link.scss";
+@import "blocks/story/__button/story__button.scss";
+@import "blocks/story/__button/_type/story__button-type-more.scss";
+
+@import "blocks/tours/__title/tours__title.scss";
+@import "blocks/tours/__list/tours__list.scss";
+@import "blocks/tours/__content/tours__content.scss";
+@import "blocks/tours/__card/tours__card.scss";
+@import "blocks/tours/__button/_type/tours__button-type-more.scss";
+@import "blocks/tours/__button/tours__button.scss";
+@import "blocks/tours/__footer/tours__footer.scss";
 
 // sass --watch ./styles/scss/main.scss ./styles/css/style.css

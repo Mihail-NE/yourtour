@@ -1,0 +1,24 @@
+.gallery__group-photo-type-first {
+    width: 23.8%;
+
+    @media screen and (max-width: 1024px) {
+        width: 32%;
+        &:nth-child(2) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        width: calc(100% - 60px);
+        &:nth-child(2),
+        &:nth-child(3) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        width: 150px;
+        height: 110px;
+        gap: 18px;
+    }
+}

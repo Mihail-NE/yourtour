@@ -1,5 +1,5 @@
 .tours {
-    width: min(100%, 1170px);
+    width: min(100%, 1210px);
     margin: 0 auto;
 
     @media screen and (max-width: 768px) {
@@ -12,10 +12,3 @@
         padding: 0;
     }
 }
-
-@import "./__title/tours__title";
-@import "./__list/tours__list";
-@import "./__content/tours__content";
-@import "./__card/tours__card";
-@import "./__button/tours__button";
-@import "./__footer/tours__footer";

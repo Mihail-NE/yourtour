@@ -1,27 +1,32 @@
 .tours__content {
-    margin: 106px auto 0;
-    width: min(100%, 1170px);
+    margin: 106px 20px 0;
+    max-width: 1170px;
+    width: auto;
     min-height: 1092px;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     justify-content: center;
 
     @media screen and (max-width: 1024px) {
-        width: min(100%, 918px);
-        min-height: 1629px;
+        width: auto;
+        max-width: 918px;
         gap: 18px;
-        padding: 0 max(0px, (100% - 918px) / 2);
+        margin: 106px 53px 0 53px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: 768px) {
-        width: min(100%, 600px);
-        gap: 15px;
+    @media screen and (max-width: 700px) {
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 400px) {
+        margin: 106px auto 0;
         width: 318px;
-        height: 1998px;
+        height: auto;
         margin-top: 49px;
         gap: 18px;
         grid-template-columns: 1fr;

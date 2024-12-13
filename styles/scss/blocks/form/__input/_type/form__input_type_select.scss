@@ -1,0 +1,58 @@
+.form__input-type-select {
+    @include p-normal();
+    font-family: "Roboto";
+    appearance: none;
+    color: $black;
+    padding: 19px;
+    border-radius: 10px;
+    border: 1px solid $beige-200;
+    background-color: $beige-100;
+    @include transition(all, 0.3s);
+    cursor: pointer;
+
+    &::placeholder {
+        color: $gray-300;
+    }
+
+    &:hover {
+        background-color: $beige-200;
+    }
+
+    &:focus {
+        border: 1px solid $gray-300;
+    }
+
+    option {
+        color: $black;
+    }
+
+    @media screen and (max-width: 470px) {
+        @include p-normal-m();
+        color: $black;
+        padding: 9px;
+        border-radius: 10px;
+        height: 46px;
+    }
+
+
+
+    &-icon {
+        position: absolute;
+        top: 55px;
+        right: 21px;
+        height: 24px;
+        width: 24px;
+        background: url(/yourtour/assets/icons/ic-dropdown.svg);
+        cursor: pointer;
+        pointer-events: none;
+
+        @media screen and (max-width: 470px) {
+            top: 40px;
+            right: 12px;
+        }
+    }
+}
+
+.form__input-type-select-placeholder {
+    color: $gray-300;
+}

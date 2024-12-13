@@ -1,3 +1,4 @@
+
 .story__link {
     @include p-normal();
     color: $white;
@@ -26,5 +27,9 @@
 
     &:active {
         color: $orange-200;
+
+        &:after {
+            background-color: $orange-200;
+        }
     }
 }

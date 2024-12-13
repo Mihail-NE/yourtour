@@ -19,6 +19,10 @@ body {
     width: 100%;
     margin: 0 auto;
 
+    @media screen and (max-width: 950px) {
+        pointer-events: none;
+    }
+
     @media screen and (max-width: 360px) {
         gap: 76px;
     }
