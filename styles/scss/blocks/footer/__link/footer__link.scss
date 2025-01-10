@@ -10,19 +10,15 @@
         }
     }
 
-    @media screen and (max-width: 400px) {
-        gap: 5px;
-    }
-
     &-wrap {
+        width: 408px;
         display: flex;
         gap: 30px;
-        width: 408px;
 
         @media screen and (max-width: 400px) {
-            gap: 10px;
-            width: 307px;
+            width: 308px;
             justify-content: space-between;
+            gap: 10px;
         }
     }
 
@@ -33,24 +29,28 @@
         background-position: end;
         background-size: contain;
 
-        &-telegram {
+        &-type_telegram {
             background-image: url(/yourtour/assets/img/Vector.png);
             background-position: center;
         }
 
-        &-facebook {
+        &-type_facebook {
             background-image: url(/yourtour/assets/img/fb\(1\).png);
         }
 
-        &-vk {
+        &-type_vk {
             background-image: url(/yourtour/assets/img/vk.png);
         }
 
         @media screen and (max-width: 400px) {
-            &-telegram {
-               width: 18px;
-               height: 18px;
-               background-position: end;
+            &-type_telegram {
+                width: 19px;
+                height: 19px;
+                margin-right: 3px;
+                background-position: end;
+            }
+            &-type_facebook {
+                background-position: center;
             }
         }
     }
@@ -88,7 +88,6 @@
             @include p-normal-m();
             color: $black;
             gap: 5px;
-
         }
     }
 }

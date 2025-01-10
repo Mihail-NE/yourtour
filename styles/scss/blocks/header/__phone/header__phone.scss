@@ -1,7 +1,7 @@
 .header__phone-link {
     all: unset;
-    @include p-normal();
     position: relative;
+    @include p-normal();
     text-decoration: none;
     cursor: pointer;
     color: $white;

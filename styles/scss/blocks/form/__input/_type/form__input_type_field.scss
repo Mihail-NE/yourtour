@@ -23,10 +23,10 @@
     }
 
     @media screen and (max-width: 470px) {
+        height: 46px;
+        padding: 9px;
         @include p-normal-m();
         color: $black;
-        padding: 9px;
         border-radius: 10px;
-        height: 46px;
     }
 }

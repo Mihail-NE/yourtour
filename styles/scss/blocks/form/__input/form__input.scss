@@ -1,38 +1,35 @@
 .form__input {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  flex: 1 1 330px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 330px;
 
-
-
-
-  @media screen and (max-width: 470px) {
-      flex: 0 1 278px;
-      height: 74px;
-  }
-
-  &-wrap {
-      padding: 71px 70px 0;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 33px 30px;
-      justify-content: space-between;
-
-      @media screen and (max-width: 1024px) {
-        padding: 60px 60px 0;
-        gap: 33px 20px;
+    @media screen and (max-width: 470px) {
+        flex: 0 1 278px;
+        height: 74px;
     }
 
-      @media screen and (max-width: 800px) {
-          padding: 40px 40px 0;
-      }
+    &-wrap {
+        padding: 71px 70px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 33px 30px;
+        justify-content: space-between;
 
-      @media screen and (max-width: 470px) {
-          gap: 30px;
-          height: 599px;
-          padding: 0;
-      }
-  }
+        @media screen and (max-width: 1024px) {
+            padding: 60px 60px 0;
+            gap: 33px 20px;
+        }
+
+        @media screen and (max-width: 800px) {
+            padding: 40px 40px 0;
+        }
+
+        @media screen and (max-width: 470px) {
+            gap: 30px;
+            height: 599px;
+            padding: 0;
+        }
+    }
 }

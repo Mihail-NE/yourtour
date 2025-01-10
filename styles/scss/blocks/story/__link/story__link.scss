@@ -1,9 +1,8 @@
-
 .story__link {
+    position: relative;
     @include p-normal();
     color: $white;
     text-decoration: none;
-    position: relative;
 
     &:after {
         content: "";

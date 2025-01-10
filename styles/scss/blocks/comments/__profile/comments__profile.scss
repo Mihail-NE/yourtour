@@ -8,19 +8,19 @@
     }
 
     &-name {
+        text-align: left;
         @include h3();
         color: $black;
-        text-align: left;
 
         @media screen and (max-width: 550px) {
-            @include h3-m();
             text-align: start;
+            @include h3-m();
         }
     }
 
     &-tour {
-        @include p-small($gray-300);
         margin-top: 8px;
+        @include p-small($gray-300);
 
         @media screen and (max-width: 550px) {
             @include p-small-m();

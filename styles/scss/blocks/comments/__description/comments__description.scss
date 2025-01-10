@@ -1,15 +1,15 @@
 .comments__description {
     margin: auto;
-    @include p-normal();
-    color: $gray-300;
-    text-align: center;
     margin-top: 30px;
     width: 400px;
+    text-align: center;
+    @include p-normal();
+    color: $gray-300;
 
     @media screen and (max-width: 550px) {
-        @include p-normal-m();
-        color: $gray-300;
         margin-top: 19px;
         max-width: 318px;
+        @include p-normal-m();
+        color: $gray-300;
     }
 }

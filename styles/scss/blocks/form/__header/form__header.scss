@@ -20,15 +20,15 @@
 }
 
 .form__description {
+    width: min(100%, 400px);
+    margin: auto;
     @include p-normal();
     color: $gray-300;
     text-align: center;
-    width: min(100%, 400px);
-    margin: auto;
 
     @media screen and (max-width: 470px) {
+        width: 318px;
         @include p-normal-m();
         color: $gray-300;
-        width: 318px;
     }
 }

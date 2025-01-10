@@ -3,6 +3,7 @@
     color: $gray-300;
 
     @media screen and (max-width: 400px) {
+        margin-bottom: 3px;
         @include p-normal-m();
         color: $gray-300;
     }

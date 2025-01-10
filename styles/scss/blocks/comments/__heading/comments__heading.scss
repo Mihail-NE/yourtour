@@ -1,15 +1,14 @@
 .comments__heading {
     margin: 0 auto;
-    @include h2();
-
     width: 529px;
+    @include h2();
 
     @media screen and (max-width: 1024px) {
         line-height: 73px;
     }
 
     @media screen and (max-width: 550px) {
-        @include h2-m();
         max-width: 318px;
+        @include h2-m();
     }
 }

@@ -1,11 +1,11 @@
 .story__card {
+    max-width: 1170px;
+    width: auto;
+    height: 567px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    max-width: 1170px;
-    width: auto;
-    height: 567px;
     border-radius: 50px;
     cursor: pointer;
     background: linear-gradient(
@@ -32,9 +32,9 @@
 
     @media screen and (max-width: 450px) {
         max-width: 318px;
+        margin: 0 auto;
         height: 455px;
         border-radius: 20px;
-        margin: 0 auto;
     }
 
     &-photo {
@@ -65,10 +65,10 @@
         text-align: start;
 
         @media screen and (max-width: 450px) {
-            @include h3-m();
-            color: $white;
             text-align: start;
             max-width: 150px;
+            @include h3-m();
+            color: $white;
         }
     }
 

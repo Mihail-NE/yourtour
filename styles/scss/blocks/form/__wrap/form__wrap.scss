@@ -1,14 +1,11 @@
 .form__wrap {
     margin: 100px auto 0;
-    background-color: $white;
-    border-radius: 50px;
     width: min(calc(100% - 106px), 1170px);
     height: 986px;
-    // height: auto;
+    background-color: $white;
+    border-radius: 50px;
 
-
-
-    @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1024px) {
         height: auto;
         padding-bottom: 60px;
     }
@@ -16,10 +13,8 @@
     @media screen and (max-width: 470px) {
         margin: 39px auto 0;
         padding: 20px;
-        border-radius: 30px;
         width: 278px;
         height: 1070px;
+        border-radius: 30px;
     }
-
-
 }

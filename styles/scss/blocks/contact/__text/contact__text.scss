@@ -8,10 +8,10 @@
         }
 
         @media screen and (max-width: 400px) {
-            @include p-normal-m;
-            color: $gray-300;
             width: 300px;
             margin: auto;
+            @include p-normal-m;
+            color: $gray-300;
         }
     }
 

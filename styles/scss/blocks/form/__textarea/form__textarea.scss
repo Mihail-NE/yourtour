@@ -1,11 +1,11 @@
 .form__textarea {
     margin: 33px auto;
-    display: flex;
-    flex-direction: column;
+    padding: 0 70px;
     width: min(100% - 140px, 1030px);
     min-height: 188px;
+    display: flex;
+    flex-direction: column;
     gap: 8px;
-    padding: 0 70px;
 
     @media screen and (max-width: 1024px) {
         padding: 0 60px;
@@ -26,11 +26,11 @@
     }
 
     &-field {
+        height: 110px;
+        padding: 20px;
         @include p-normal();
         font-family: Roboto;
-        height: 110px;
         color: $black;
-        padding: 20px;
         border-radius: 10px;
         border: 1px solid $beige-200;
         background-color: $beige-100;

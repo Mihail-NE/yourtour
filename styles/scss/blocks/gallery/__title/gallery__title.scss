@@ -8,17 +8,17 @@
     text-align: center;
 
     @media screen and (max-width: 670px) {
-        @include h2-m();
         width: 318px;
+        @include h2-m();
     }
 }
 
 .gallery__description {
+    width: 400px;
     margin: 30px auto 0;
     @include p-normal();
     color: $gray-300;
     text-align: center;
-    width: 400px;
 
     @media screen and (max-width: 1024px) {
         margin-top: 29px;
@@ -26,8 +26,8 @@
 
     @media screen and (max-width: 670px) {
         @include p-normal-m();
+        width: 318px;
         margin-top: 19px;
         color: $gray-300;
-        width: 318px;
     }
 }

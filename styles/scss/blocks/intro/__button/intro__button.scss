@@ -1,12 +1,12 @@
 .intro__button {
-    @include p-small($black);
-    border-radius: 10px;
+    width: 118px;
+    height: 34px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 118px;
-    height: 34px;
+    @include p-small($black);
     border: none;
+    border-radius: 10px;
     background-color: $white;
     @include transition(all, 0.3s);
     cursor: pointer;
